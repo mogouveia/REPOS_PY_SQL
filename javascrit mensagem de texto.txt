@@ -1,0 +1,33 @@
+function onLoad() {
+   //Type appropriate comment here, and begin script below
+   
+    var msg = 'A implantação deste projeto, poderá gerar o entendimento do cliente que houve aumento de preço antes do período previsto em contrato e/ou foi reajustado mais de uma vez no ano?';
+    var msg2 = 'Para implantação da solução deste projeto foi necessário o desenvolvimento de uma mecânica nova de faturamento e/ou aquisição?';
+    var msg3 = 'O Projeto refere-se a lançamento de Produto ou Serviço totalmente novo para o negócio? (Não possui produto/serviço similar na Vivo)';	
+    var msg4='O Projeto possui pendencias para entrega de solução pós implantação? (correções pendentes e/ou solução paliativa)'	;
+    var msg5='O projeto refere-se a desconto que será aplicado em produto/serviço diferente do ofertado? (Explo: Oferta para aquisição de TV e desconto aplicado na Banda Larga)'	;  
+    var msg6='Ocorrerá a inclusão de produtos ou serviços na conta/assinatura do cliente sem seu aceite, mas mantendo o valor final?  (Explo. inclusão de SVA no Bundle)'	;	
+    var msg7='Projeto refere-se para aquisição de novas Altas?'	;	
+    var msg8='Para concluir a aquisição deste produto/serviço é necessário alguma ação do cliente posterior a compra?'	;	
+    var msg9='Em caso de serviços de parceiros, alguma solicitação do cliente terá que ser atendida pelo parceiro? (Atendimento Vivo não consegue executar)'	;	
+    var msg10='O produto e serviço será oferecido no formato de dias grátis e/ou degustação com ativação automática posterior?';
+    var msg11='Após a compra, para utilizar o serviço o cliente precisará executar alguma ação adicional? (Explo. Acessar o site do parceiro para ativar o produto)';	
+	
+	g_form.showFieldMsg('u_account_increase_before_forecast_period', getMessage(msg), 'info');
+	g_form.showFieldMsg('u_discounts_linked_to_products_services_other_than_the_main_plan', getMessage(msg2), 'info');
+     g_form.showFieldMsg('u_change_in_products_or_services_without_the_customer_s_prior_consent', getMessage(msg3), 'info');
+	g_form.showFieldMsg('u_mechanism_new_or_implemented_recently_feature', getMessage(msg4), 'info');
+	g_form.showFieldMsg('u_mechanism_or_process_with_untreated_points_of_attention', getMessage(msg5), 'info');	
+	g_form.showFieldMsg('u_customers_request_being_executed_by_a_vivos_partner', getMessage(msg6), 'info');	
+        g_form.showFieldMsg('u_inclusion_of_new_items_with_values_in_the_customers_account', getMessage(msg7), 'info');
+	g_form.showFieldMsg('u_subsequent_action_required_by_the_customer_or_vivo', getMessage(msg8), 'info');
+	g_form.showFieldMsg('u_solicitacao_cliente_selo', getMessage(msg9), 'info');
+	g_form.showFieldMsg('u_produto_servico_degustacao', getMessage(msg10), 'info');
+	g_form.showFieldMsg('u_quality_stamp2', getMessage(msg11), 'info');
+
+	
+	
+    return;
+   
+   
+}
