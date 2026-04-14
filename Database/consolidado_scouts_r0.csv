@@ -1,0 +1,695 @@
+clube_nome_completo,apelido,posicao_nome,mando,adversario_nome,pontos_num,media_num,jogos_num,preco_num,variacao_num
+Remo,Kayky Almeida,Zagueiro,Casa,MIR,0.6,0.6,1,1.85,-0.15
+Chapecoense,Rafael Santos,Goleiro,Fora,VAS,0.0,0.0,0,3.0,0.0
+Remo,João Pedro,Atacante,Casa,MIR,-1.0,-1.0,1,2.1,-0.9
+Chapecoense,Giovanni Augusto,Meia,Fora,VAS,1.7,1.7,1,4.69,-0.31
+Remo,Yago Ferreira,Meia,Casa,MIR,0.0,0.0,0,2.0,0.0
+Remo,Diego Hernández,Meia,Casa,MIR,0.0,0.0,0,4.0,0.0
+Remo,Nicolás Ferreira,Atacante,Casa,MIR,0.0,0.0,0,3.0,0.0
+Chapecoense,Léo Vieira,Goleiro,Fora,VAS,2.2,2.2,1,2.41,0.41
+Remo,Eduardo Melo,Atacante,Casa,MIR,1.4,1.4,1,2.13,0.13
+Remo,PH Gama,Meia,Casa,MIR,0.0,0.0,0,2.0,0.0
+Remo,Marcos Alexandre,Goleiro,Casa,MIR,0.0,0.0,0,1.0,0.0
+Remo,Cristian Tassano,Zagueiro,Casa,MIR,0.0,0.0,0,3.0,0.0
+Chapecoense,Gilmar Dal Pozzo,Técnico,Fora,VAS,7.95,7.95,1,5.24,2.24
+Chapecoense,Bruno Leonardo,Zagueiro,Fora,VAS,0.0,0.0,0,3.0,0.0
+Chapecoense,Marcinho,Atacante,Fora,VAS,1.6,1.6,1,3.02,0.02
+Chapecoense,Marcos Vinícius,Lateral,Fora,VAS,-1.3,-1.3,1,2.0,-1.0
+Chapecoense,Neto Pessoa,Atacante,Fora,VAS,0.0,0.0,0,3.0,0.0
+Chapecoense,Victor Caetano,Zagueiro,Fora,VAS,3.0,3.0,1,3.51,0.51
+Chapecoense,Jean Carlos,Meia,Fora,VAS,13.0,13.0,1,7.83,3.83
+Chapecoense,Perotti,Atacante,Fora,VAS,0.0,0.0,0,4.0,0.0
+Chapecoense,Eduardo Doma,Zagueiro,Fora,VAS,3.0,3.0,1,2.69,0.69
+Chapecoense,Walter Clar,Lateral,Fora,VAS,9.5,9.5,1,6.6,2.6
+Chapecoense,Bressan,Zagueiro,Fora,VAS,0.0,0.0,0,3.0,0.0
+Remo,João Victor,Goleiro,Casa,MIR,0.0,0.0,0,1.0,0.0
+Chapecoense,Rafael Thyere,Zagueiro,Fora,VAS,0.0,0.0,0,4.0,0.0
+Mirassol,Walter,Goleiro,Fora,REM,4.2,4.2,1,5.56,0.56
+Chapecoense,Rafael Carvalheira,Meia,Fora,VAS,9.2,9.2,1,6.5,2.5
+Chapecoense,Camilo,Meia,Fora,VAS,4.4,4.4,1,4.82,0.82
+Chapecoense,João Paulo,Zagueiro,Fora,VAS,7.0,7.0,1,4.91,1.91
+Chapecoense,Ênio,Atacante,Fora,VAS,0.0,0.0,0,4.0,0.0
+Chapecoense,João Vitor,Meia,Fora,VAS,0.0,0.0,0,3.0,0.0
+Chapecoense,Mancha,Lateral,Fora,VAS,0.0,0.0,0,3.0,0.0
+Chapecoense,Rubens,Atacante,Fora,VAS,0.0,0.0,0,2.0,0.0
+Chapecoense,Everton,Lateral,Fora,VAS,2.7,2.7,1,3.4,0.4
+Chapecoense,Higor Meritão,Meia,Fora,VAS,13.4,13.4,1,7.97,3.97
+Chapecoense,Gustavo Talles,Lateral,Fora,VAS,0.0,0.0,0,2.0,0.0
+Flamengo,Vitão,Zagueiro,Casa,INT,0.0,0.0,0,9.0,0.0
+Athlético-PR,Arthur Dias,Zagueiro,Casa,COR,8.0,8.0,1,5.26,2.26
+Chapecoense,Robert,Meia,Fora,VAS,3.0,3.0,1,3.51,0.51
+Internacional,Bernabéi,Lateral,Fora,FLA,1.0,1.0,1,9.35,-1.65
+Flamengo,Rossi,Goleiro,Casa,INT,0.6,0.6,1,7.57,-1.43
+Chapecoense,Ítalo,Atacante,Fora,VAS,2.9,2.9,1,2.65,0.65
+Mirassol,Eduardo,Meia,Fora,REM,7.0,7.0,1,7.36,1.36
+Chapecoense,David,Meia,Fora,VAS,0.0,0.0,0,1.0,0.0
+Chapecoense,Kauan,Zagueiro,Fora,VAS,0.0,0.0,0,1.0,0.0
+Mirassol,Reinaldo,Lateral,Fora,REM,0.8,0.8,1,14.19,-2.81
+Fluminense,Lucho Acosta,Meia,Fora,BAH,13.8,13.8,1,11.38,3.38
+Chapecoense,Palacios,Atacante,Fora,VAS,0.0,0.0,0,2.0,0.0
+Chapecoense,Mailson,Atacante,Fora,VAS,0.0,0.0,0,2.0,0.0
+Cruzeiro,Kaiki Bruno,Lateral,Casa,CFC,2.2,2.2,1,12.23,-1.77
+Bahia,Everton Ribeiro,Meia,Casa,FLU,1.5,1.5,1,8.71,-1.29
+Mirassol,Rodrigo Rodrigues,Atacante,Fora,REM,0.0,0.0,0,4.0,0.0
+São Paulo,Luciano,Atacante,Fora,SAN,15.3,15.3,1,20.09,2.09
+Santos,Gustavo Henrique,Meia,Casa,SAO,0.0,0.0,0,2.0,0.0
+Santos,Barreal,Meia,Casa,SAO,12.6,12.6,1,14.24,2.24
+Corinthians,Yuri Alberto,Atacante,Fora,CAP,0.7,0.7,1,15.79,-3.21
+Grêmio,Braithwaite,Atacante,Casa,BOT,0.0,0.0,0,13.0,0.0
+Atlético-MG,Hulk,Atacante,Fora,RBB,5.3,5.3,1,14.95,-1.05
+São Paulo,Felipe Negrucci,Meia,Fora,SAN,0.0,0.0,0,2.0,0.0
+Palmeiras,Andreas Pereira,Meia,Casa,VIT,6.7,6.7,1,14.62,-0.38
+Cruzeiro,Nicolas Pontes,Lateral,Casa,CFC,0.0,0.0,0,1.0,0.0
+Santos,Caballero,Atacante,Casa,SAO,1.6,1.6,1,3.83,-0.17
+Santos,Miguelito,Meia,Casa,SAO,3.6,3.6,1,4.54,0.54
+Cruzeiro,William Fernando,Lateral,Casa,CFC,0.0,0.0,0,1.0,0.0
+Cruzeiro,Fernando,Atacante,Casa,CFC,0.0,0.0,0,1.0,0.0
+Cruzeiro,Vitinho,Meia,Casa,CFC,0.0,0.0,0,2.0,0.0
+Santos,Mateus Xavier,Atacante,Casa,SAO,0.0,0.0,0,2.0,0.0
+Cruzeiro,Bruno Alves,Zagueiro,Casa,CFC,0.0,0.0,0,2.0,0.0
+Cruzeiro,Rodriguinho,Meia,Casa,CFC,0.0,0.0,0,3.0,0.0
+Grêmio,Enamorado,Atacante,Casa,BOT,1.2,1.2,1,7.78,-1.22
+Cruzeiro,Cauan Baptistella,Meia,Casa,CFC,0.0,0.0,0,2.0,0.0
+Cruzeiro,Rhuan Gabriel,Meia,Casa,CFC,0.0,0.0,0,1.0,0.0
+Chapecoense,Bolasie,Atacante,Fora,VAS,1.2,1.2,1,5.33,-0.67
+Cruzeiro,Kaiquy Luiz,Zagueiro,Casa,CFC,0.0,0.0,0,1.0,0.0
+Cruzeiro,Janderson,Zagueiro,Casa,CFC,0.0,0.0,0,1.0,0.0
+Palmeiras,Vitor Roque,Atacante,Casa,VIT,7.6,7.6,1,19.85,-1.15
+Cruzeiro,Kaio Jorge,Atacante,Casa,CFC,2.2,2.2,1,14.68,-2.32
+Remo,Thalisson Gabriel,Zagueiro,Casa,MIR,0.0,0.0,0,3.0,0.0
+Bahia,Luciano Juba,Lateral,Casa,FLU,6.2,6.2,1,7.9,0.9
+Vasco,Johan Rojas,Meia,Casa,CHA,1.7,1.7,1,5.51,-0.49
+Mirassol,Willian Machado,Zagueiro,Fora,REM,0.0,0.0,1,4.09,-0.91
+Flamengo,Pedro,Atacante,Casa,INT,6.4,6.4,1,18.61,-1.39
+Cruzeiro,Marcelo Eráclito,Goleiro,Casa,CFC,0.0,0.0,0,1.0,0.0
+Mirassol,Igor Cariús,Lateral,Fora,REM,0.0,0.0,0,3.0,0.0
+Vasco,GB,Atacante,Casa,CHA,0.0,0.0,1,3.27,-0.73
+Bragantino,Cauê,Lateral,Casa,CAM,0.0,0.0,0,2.0,0.0
+São Paulo,Dória,Zagueiro,Fora,SAN,0.0,0.0,0,7.0,0.0
+Santos,JP Chermont,Lateral,Casa,SAO,0.0,0.0,0,2.0,0.0
+Mirassol,Galeano,Atacante,Fora,REM,1.2,1.2,1,6.97,-1.03
+Mirassol,Denilson,Meia,Fora,REM,0.0,0.0,0,5.0,0.0
+Vasco,Saldivia,Zagueiro,Casa,CHA,0.0,0.0,0,6.0,0.0
+Botafogo,Wallace Davi,Meia,Fora,GRE,0.0,0.0,0,4.0,0.0
+Bragantino,Gustavo Henrique,Zagueiro,Casa,CAM,0.0,0.0,0,3.0,0.0
+Atlético-MG,Maycon,Meia,Fora,RBB,2.5,2.5,1,6.6,-0.4
+Internacional,Paulinho,Meia,Fora,FLA,0.2,0.2,1,4.16,-0.84
+Bragantino,Marcelinho,Meia,Casa,CAM,6.3,6.3,1,3.03,2.03
+Vasco,Guilherme Estrella,Meia,Casa,CHA,0.0,0.0,0,3.0,0.0
+Vasco,Phillipe Gabriel,Goleiro,Casa,CHA,0.0,0.0,0,1.0,0.0
+Bahia,Román Gómez,Lateral,Casa,FLU,0.0,0.0,0,5.0,0.0
+Atlético-MG,Mateus Iseppe,Meia,Fora,RBB,0.0,0.0,0,2.0,0.0
+Mirassol,Lucas Oliveira,Zagueiro,Fora,REM,0.0,0.0,0,4.0,0.0
+Atlético-MG,Kauã Pascini,Lateral,Fora,RBB,0.0,0.0,0,1.0,0.0
+São Paulo,Luan Vinícius,Meia,Fora,SAN,0.0,0.0,0,4.0,0.0
+Remo,Marllon,Zagueiro,Casa,MIR,3.5,3.5,1,5.32,0.32
+Atlético-MG,Minda,Atacante,Fora,RBB,0.0,0.0,0,9.0,0.0
+Flamengo,Andrew,Goleiro,Casa,INT,0.0,0.0,0,3.0,0.0
+Atlético-MG,Vitão,Zagueiro,Fora,RBB,0.0,0.0,0,1.0,0.0
+Chapecoense,Bruno Pacheco,Lateral,Fora,VAS,0.0,0.0,0,6.0,0.0
+Chapecoense,João Bom,Atacante,Fora,VAS,0.0,0.0,0,2.0,0.0
+Remo,Patrick,Meia,Casa,MIR,1.3,1.3,1,4.55,-0.45
+Remo,Léo Andrade,Zagueiro,Casa,MIR,3.2,3.2,1,4.39,0.39
+Vitória,Gabriel,Goleiro,Fora,PAL,6.8,6.8,1,7.29,1.29
+Atlético-MG,Victor Hugo,Meia,Fora,RBB,9.5,9.5,1,6.6,2.6
+Mirassol,Igor Formiga,Lateral,Fora,REM,4.0,4.0,1,6.31,0.31
+Grêmio,Noriega,Zagueiro,Casa,BOT,0.0,0.0,0,5.0,0.0
+Mirassol,Rodrigues,Zagueiro,Fora,REM,0.0,0.0,0,4.0,0.0
+Corinthians,Jacaré,Lateral,Fora,CAP,0.0,0.0,0,2.0,0.0
+Atlético-MG,Preciado,Lateral,Fora,RBB,0.0,0.0,0,8.0,0.0
+São Paulo,Paulinho,Atacante,Fora,SAN,0.0,0.0,0,2.0,0.0
+Coritiba,Breno Lopes,Atacante,Fora,CRU,1.1,1.1,1,6.93,-1.07
+Grêmio,Tetê,Atacante,Casa,BOT,3.3,3.3,1,10.98,-1.02
+Vitória,Emmanuel Martínez,Meia,Fora,PAL,0.0,0.0,0,5.0,0.0
+Remo,Rafael Monti,Atacante,Casa,MIR,0.0,0.0,0,4.0,0.0
+Cruzeiro,Gerson,Meia,Casa,CFC,1.4,1.4,1,11.13,-1.87
+Corinthians,Gabriel Paulista,Zagueiro,Fora,CAP,-0.3,-0.3,1,8.08,-1.92
+Athlético-PR,Bruninho,Meia,Casa,COR,0.0,0.0,0,3.0,0.0
+Internacional,Villagra,Meia,Fora,FLA,0.0,0.0,1,6.55,-1.45
+Coritiba,Gustavo,Meia,Fora,CRU,0.0,0.0,0,4.0,0.0
+Vitória,Edu,Zagueiro,Fora,PAL,0.0,0.0,0,4.0,0.0
+Atlético-MG,Cassierra,Atacante,Fora,RBB,0.0,0.0,0,10.0,0.0
+Vitória,Riccieli,Zagueiro,Fora,PAL,5.0,5.0,1,5.03,1.03
+Bahia,Dell,Atacante,Casa,FLU,2.5,2.5,1,2.51,0.51
+Corinthians,Milans,Lateral,Fora,CAP,0.0,0.0,0,6.0,0.0
+Remo,Picco,Meia,Casa,MIR,0.0,0.0,0,5.0,0.0
+Remo,José Welison,Meia,Casa,MIR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Gilberto,Lateral,Casa,COR,0.0,0.0,0,2.0,0.0
+Grêmio,Tiaguinho,Meia,Casa,BOT,0.0,0.0,0,1.0,0.0
+Remo,Cufré,Lateral,Casa,MIR,0.0,0.0,0,4.0,0.0
+Fluminense,Jemmes,Zagueiro,Fora,BAH,5.5,5.5,1,6.84,0.84
+Remo,Freitas,Meia,Casa,MIR,0.0,0.0,0,1.0,0.0
+Mirassol,Everton Galdino,Atacante,Fora,REM,0.5,0.5,1,3.45,-0.55
+Vitória,Marinho,Atacante,Fora,PAL,0.0,0.0,0,6.0,0.0
+Corinthians,Matheus Pereira,Meia,Fora,CAP,-0.3,-0.3,1,4.8,-1.2
+Atlético-MG,Cissé,Meia,Fora,RBB,0.0,0.0,0,1.0,0.0
+Vitória,Fintelman,Goleiro,Fora,PAL,0.0,0.0,0,2.0,0.0
+Remo,Vitor Bueno,Meia,Casa,MIR,0.0,0.0,0,7.0,0.0
+Palmeiras,Belé,Atacante,Casa,VIT,0.0,0.0,0,3.0,0.0
+Vasco,Marino Hinestroza,Atacante,Casa,CHA,0.0,0.0,0,9.0,0.0
+Vitória,Yuri Sena,Goleiro,Fora,PAL,0.0,0.0,0,1.0,0.0
+Palmeiras,Luis Pacheco,Meia,Casa,VIT,0.0,0.0,0,3.0,0.0
+Vasco,Brenner,Atacante,Casa,CHA,0.0,0.0,0,8.0,0.0
+Palmeiras,Riquelme Fillipi,Atacante,Casa,VIT,-0.3,-0.3,1,0.71,-0.29
+Coritiba,Fabinho,Atacante,Fora,CRU,0.0,0.0,0,3.0,0.0
+Vitória,Fabri,Atacante,Fora,PAL,5.4,5.4,1,5.17,1.17
+Atlético-MG,Índio,Meia,Fora,RBB,0.0,0.0,0,1.0,0.0
+Palmeiras,Arthur,Lateral,Casa,VIT,-0.3,-0.3,1,0.71,-0.29
+Athlético-PR,Riquelme,Meia,Casa,COR,-0.3,-0.3,1,0.71,-0.29
+Vitória,Lawan,Atacante,Fora,PAL,0.0,0.0,0,1.0,0.0
+Internacional,Allex,Meia,Fora,FLA,0.0,0.0,0,1.0,0.0
+Vitória,Zé Breno,Meia,Fora,PAL,0.0,0.0,0,2.0,0.0
+Internacional,Alisson,Lateral,Fora,FLA,0.0,0.0,0,1.0,0.0
+Internacional,João Bezerra,Atacante,Fora,FLA,0.0,0.0,0,1.0,0.0
+Internacional,João Victor,Atacante,Fora,FLA,0.0,0.0,0,1.0,0.0
+Vasco,Andrey Fernandes,Atacante,Casa,CHA,1.7,1.7,1,1.41,0.41
+São Paulo,Pedro Ferreira,Meia,Fora,SAN,0.0,0.0,0,1.0,0.0
+Santos,Fernando Pradella,Atacante,Casa,SAO,0.0,0.0,1,0.82,-0.18
+Botafogo,Arthur Izaque,Atacante,Fora,GRE,0.0,0.0,0,1.0,0.0
+Flamengo,Lucas Paquetá,Meia,Casa,INT,0.0,0.0,0,18.0,0.0
+Botafogo,Kauan Toledo,Atacante,Fora,GRE,0.0,0.0,0,1.0,0.0
+Vasco,João Vitor,Atacante,Casa,CHA,0.0,0.0,1,0.82,-0.18
+Corinthians,Kaio César,Atacante,Fora,CAP,0.0,0.0,0,8.0,0.0
+Botafogo,Kadu,Lateral,Fora,GRE,0.0,0.0,0,1.0,0.0
+Botafogo,Arthur Novaes,Meia,Fora,GRE,0.0,0.0,0,1.0,0.0
+Vasco,JP,Meia,Casa,CHA,0.0,0.0,0,1.0,0.0
+Remo,Alef Manga,Atacante,Casa,MIR,0.9,0.9,1,4.41,-0.59
+Mirassol,Lucas Mugni,Meia,Fora,REM,0.0,0.0,0,7.0,0.0
+Fluminense,Martinelli,Meia,Fora,BAH,1.7,1.7,1,7.96,-1.04
+Chapecoense,Anderson,Goleiro,Fora,VAS,0.0,0.0,0,3.0,0.0
+Internacional,Alan Patrick,Meia,Fora,FLA,3.0,3.0,1,7.6,-0.4
+Bragantino,Herrera,Atacante,Casa,CAM,0.0,0.0,0,5.0,0.0
+Remo,Juan Carlos Osorio,Técnico,Casa,MIR,1.97,1.97,1,5.6,-0.4
+Botafogo,Arthur Cabral,Atacante,Fora,GRE,7.1,7.1,1,9.04,1.04
+Internacional,Alerrandro,Atacante,Fora,FLA,0.0,0.0,0,9.0,0.0
+Cruzeiro,Villalba,Zagueiro,Casa,CFC,0.0,0.0,0,10.0,0.0
+Cruzeiro,Chico da Costa,Atacante,Casa,CFC,0.0,0.0,0,5.0,0.0
+Flamengo,Pablo Lúcio,Meia,Casa,INT,0.0,0.0,0,2.0,0.0
+Vitória,Pedro Henrique,Atacante,Fora,PAL,0.0,0.0,0,3.0,0.0
+Vitória,Erick,Atacante,Fora,PAL,12.5,12.5,1,10.11,3.11
+Athlético-PR,Santos,Goleiro,Casa,COR,11.5,11.5,1,10.58,2.58
+Cruzeiro,Cássio,Goleiro,Casa,CFC,-2.7,-2.7,1,9.69,-3.31
+Internacional,Rochet,Goleiro,Fora,FLA,1.8,1.8,1,7.18,-0.82
+Vasco,Philippe Coutinho,Meia,Casa,CHA,10.8,10.8,1,13.61,1.61
+São Paulo,Rafael,Goleiro,Fora,SAN,4.2,4.2,1,8.84,-0.16
+Santos,Neymar,Meia,Casa,SAO,0.0,0.0,0,19.0,0.0
+Flamengo,Alex Sandro,Lateral,Casa,INT,1.0,1.0,1,10.17,-1.83
+Botafogo,Vitinho,Lateral,Fora,GRE,7.7,7.7,1,10.06,1.06
+Santos,Gabriel Brazão,Goleiro,Casa,SAO,-6.0,-6.0,1,6.08,-3.92
+Atlético-MG,Everson,Goleiro,Fora,RBB,3.7,3.7,1,10.3,-0.7
+Atlético-MG,Renan Lodi,Lateral,Fora,RBB,11.2,11.2,1,12.93,1.93
+São Paulo,Enzo Díaz,Lateral,Fora,SAN,9.2,9.2,1,9.77,1.77
+Botafogo,Alexander Barboza,Zagueiro,Fora,GRE,6.2,6.2,1,11.17,0.17
+Vasco,Léo Jardim,Goleiro,Casa,CHA,1.9,1.9,1,9.67,-1.33
+Fluminense,Fábio,Goleiro,Fora,BAH,2.1,2.1,1,10.55,-1.45
+Cruzeiro,Christian,Meia,Casa,CFC,1.2,1.2,1,7.78,-1.22
+Atlético-MG,Ruan,Zagueiro,Fora,RBB,-1.3,-1.3,1,4.45,-1.55
+Flamengo,Carrascal,Meia,Casa,INT,3.2,3.2,1,11.76,-1.24
+Bahia,David Duarte,Zagueiro,Casa,FLU,0.9,0.9,1,4.41,-0.59
+Cruzeiro,Fabrício Bruno,Zagueiro,Casa,CFC,0.5,0.5,1,9.99,-2.01
+Remo,Yago Pikachu,Meia,Casa,MIR,2.1,2.1,1,6.46,-0.54
+Bahia,Gilberto,Lateral,Casa,FLU,4.4,4.4,1,7.27,0.27
+Bahia,Erick Pulga,Atacante,Casa,FLU,3.4,3.4,1,9.37,-0.63
+Bahia,João Paulo,Goleiro,Casa,FLU,0.0,0.0,0,6.0,0.0
+Bahia,Ronaldo,Goleiro,Casa,FLU,4.2,4.2,1,6.38,0.38
+Bahia,Ademir,Atacante,Casa,FLU,5.2,5.2,1,8.37,0.37
+Bahia,Willian José,Atacante,Casa,FLU,9.5,9.5,1,13.15,1.15
+Bahia,Acevedo,Meia,Casa,FLU,1.9,1.9,1,4.76,-0.24
+Bahia,Jean Lucas,Meia,Casa,FLU,6.1,6.1,1,9.5,0.5
+Bahia,Santiago Mingo,Zagueiro,Casa,FLU,0.5,0.5,1,5.08,-0.92
+Bahia,Zé Guilherme,Lateral,Casa,FLU,0.0,0.0,0,3.0,0.0
+Bahia,Kanu,Zagueiro,Casa,FLU,0.0,0.0,0,4.0,0.0
+Bahia,Iago,Lateral,Casa,FLU,0.0,0.0,0,4.0,0.0
+Bahia,Caio Alexandre,Meia,Casa,FLU,0.0,0.0,0,7.0,0.0
+Bahia,Gabriel Xavier,Zagueiro,Casa,FLU,0.0,0.0,0,5.0,0.0
+Bahia,Cristian Olivera,Atacante,Casa,FLU,2.9,2.9,1,5.93,-0.07
+Bahia,Erick,Meia,Casa,FLU,0.0,0.0,1,5.73,-1.27
+Bahia,Rezende,Meia,Casa,FLU,0.0,0.0,0,3.0,0.0
+Bahia,Victor Nascimento,Goleiro,Casa,FLU,0.0,0.0,0,1.0,0.0
+Botafogo,Neto,Goleiro,Fora,GRE,10.2,10.2,1,10.12,2.12
+Bahia,Rodrigo Nestor,Meia,Casa,FLU,0.0,0.0,1,5.73,-1.27
+Bahia,Cauly,Meia,Casa,FLU,0.0,0.0,0,6.0,0.0
+Bahia,Michel Araújo,Meia,Casa,FLU,-3.1,-3.1,1,3.82,-2.18
+Bahia,Rogério Ceni,Técnico,Casa,FLU,5.19,5.19,1,10.82,-0.18
+Bahia,Fredi Lippert,Zagueiro,Casa,FLU,0.0,0.0,0,2.0,0.0
+Bahia,Kauê Furquim,Atacante,Casa,FLU,0.0,0.0,0,2.0,0.0
+Bahia,Sanabria,Atacante,Casa,FLU,0.0,0.0,0,6.0,0.0
+Bahia,Kayky,Atacante,Casa,FLU,0.0,0.0,0,5.0,0.0
+Botafogo,Alex Telles,Lateral,Fora,GRE,8.0,8.0,1,12.62,0.62
+Bahia,Ruan Pablo,Atacante,Casa,FLU,0.0,0.0,0,2.0,0.0
+Botafogo,Matheus Martins,Atacante,Fora,GRE,10.0,10.0,1,7.6,2.6
+Botafogo,Bastos,Zagueiro,Fora,GRE,0.0,0.0,0,6.0,0.0
+Botafogo,Martín Anselmi,Técnico,Fora,GRE,11.04,11.04,1,8.78,2.78
+Botafogo,Marçal,Lateral,Fora,GRE,8.0,8.0,1,7.71,1.71
+Botafogo,Léo Linck,Goleiro,Fora,GRE,0.0,0.0,0,6.0,0.0
+Botafogo,Ythallo,Zagueiro,Fora,GRE,0.0,0.0,0,4.0,0.0
+Botafogo,Joaquín Correa,Atacante,Fora,GRE,0.0,0.0,0,8.0,0.0
+Botafogo,Danilo,Meia,Fora,GRE,17.2,17.2,1,14.21,4.21
+Botafogo,Newton,Meia,Fora,GRE,2.0,2.0,1,4.79,-0.21
+Botafogo,David Ricardo,Zagueiro,Fora,GRE,0.0,0.0,0,7.0,0.0
+Botafogo,Santiago Rodríguez,Meia,Fora,GRE,5.7,5.7,1,8.54,0.54
+Botafogo,Artur,Atacante,Fora,GRE,8.0,8.0,1,9.35,1.35
+Botafogo,Cristhian Loor,Goleiro,Fora,GRE,0.0,0.0,0,2.0,0.0
+Botafogo,Montoro,Meia,Fora,GRE,5.8,5.8,1,9.4,0.4
+Botafogo,Nathan Fernandes,Atacante,Fora,GRE,5.5,5.5,1,6.02,1.02
+Botafogo,Allan,Meia,Fora,GRE,2.8,2.8,1,5.89,-0.11
+Fluminense,Savarino,Meia,Fora,BAH,0.5,0.5,1,8.36,-1.64
+Botafogo,Mateo Ponte,Lateral,Fora,GRE,6.2,6.2,1,6.27,1.27
+Botafogo,Raul,Goleiro,Fora,GRE,0.0,0.0,0,3.0,0.0
+Botafogo,Chris Ramos,Atacante,Fora,GRE,0.0,0.0,0,7.0,0.0
+Botafogo,Kaio,Zagueiro,Fora,GRE,0.0,0.0,0,7.0,0.0
+Botafogo,Kadir,Atacante,Fora,GRE,0.0,0.0,0,5.0,0.0
+Bragantino,Eduardo Sasha,Atacante,Casa,CAM,3.9,3.9,1,7.09,0.09
+Atlético-MG,Júnior Santos,Atacante,Fora,RBB,0.0,0.0,0,5.0,0.0
+Bragantino,Gabriel,Meia,Casa,CAM,0.7,0.7,1,5.15,-0.85
+Bragantino,Vagner Mancini,Técnico,Casa,CAM,8.07,8.07,1,6.92,1.92
+Bragantino,Juninho Capixaba,Lateral,Casa,CAM,16.2,16.2,1,13.04,4.04
+Bragantino,Cleiton,Goleiro,Casa,CAM,7.6,7.6,1,8.39,1.39
+Botafogo,Gabriel Abdias,Lateral,Fora,GRE,0.0,0.0,0,3.0,0.0
+Vitória,Luan Cândido,Lateral,Fora,PAL,0.0,0.0,0,5.0,0.0
+Bragantino,Matheus Fernandes,Meia,Casa,CAM,0.3,0.3,1,4.2,-0.8
+Bragantino,Fernando,Atacante,Casa,CAM,0.0,0.0,0,3.0,0.0
+Bragantino,Eric Ramires,Meia,Casa,CAM,0.0,0.0,0,5.0,0.0
+Botafogo,Jeffinho,Atacante,Fora,GRE,0.0,0.0,0,5.0,0.0
+Bragantino,Pedro Henrique,Zagueiro,Casa,CAM,4.5,4.5,1,7.31,0.31
+Botafogo,Barrera,Meia,Fora,GRE,0.0,0.0,1,5.73,-1.27
+Bragantino,Vanderlan,Lateral,Casa,CAM,0.0,0.0,0,5.0,0.0
+Bragantino,Andrés Hurtado,Lateral,Casa,CAM,4.2,4.2,1,4.75,0.75
+Bragantino,Gustavo Marques,Zagueiro,Casa,CAM,9.7,9.7,1,5.86,2.86
+Bragantino,Fabrício,Goleiro,Casa,CAM,0.0,0.0,0,2.0,0.0
+Bragantino,Lucas Barbosa,Atacante,Casa,CAM,4.0,4.0,1,7.95,-0.05
+Bragantino,Alix Vinicius,Zagueiro,Casa,CAM,3.4,3.4,1,6.1,0.1
+Bragantino,Eduardo Santos,Zagueiro,Casa,CAM,0.0,0.0,0,5.0,0.0
+Bragantino,Laquintana,Atacante,Casa,CAM,0.0,0.0,0,4.0,0.0
+Bragantino,Sant Anna,Lateral,Casa,CAM,6.2,6.2,1,5.45,1.45
+Bragantino,Isidro Pitta,Atacante,Casa,CAM,0.0,0.0,0,7.0,0.0
+Bragantino,Nathan Camargo,Meia,Casa,CAM,0.0,0.0,0,2.0,0.0
+Bragantino,Gustavinho,Meia,Casa,CAM,7.5,7.5,1,5.9,1.9
+Bragantino,Praxedes,Meia,Casa,CAM,0.0,0.0,0,4.0,0.0
+Bragantino,Lucão,Goleiro,Casa,CAM,0.0,0.0,0,4.0,0.0
+Bragantino,Henry Mosquera,Atacante,Casa,CAM,2.9,2.9,1,4.29,0.29
+Atlético-MG,Alan Franco,Meia,Fora,RBB,-0.1,-0.1,1,5.69,-1.31
+Bragantino,Guzmán Rodríguez,Zagueiro,Casa,CAM,0.0,0.0,0,6.0,0.0
+Vitória,Nathan Mendes,Lateral,Fora,PAL,0.0,0.0,0,4.0,0.0
+Bragantino,Fabinho,Meia,Casa,CAM,0.0,0.0,0,4.0,0.0
+Bragantino,Ignacio Sosa,Meia,Casa,CAM,0.4,0.4,1,5.05,-0.95
+Bragantino,Lucas Cunha,Zagueiro,Casa,CAM,0.0,0.0,0,3.0,0.0
+Atlético-MG,Dudu,Atacante,Fora,RBB,2.5,2.5,1,8.24,-0.76
+Bragantino,Vinicinho,Atacante,Casa,CAM,0.0,0.0,1,4.09,-0.91
+Bragantino,Palacios,Zagueiro,Casa,CAM,0.0,0.0,0,3.0,0.0
+Atlético-MG,Vitor Hugo,Zagueiro,Fora,RBB,0.0,0.0,0,7.0,0.0
+Bragantino,Davi Gomes,Atacante,Casa,CAM,0.0,0.0,0,3.0,0.0
+Atlético-MG,Igor Gomes,Meia,Fora,RBB,0.0,0.0,1,6.55,-1.45
+Atlético-MG,Junior Alonso,Zagueiro,Fora,RBB,3.5,3.5,1,6.14,0.14
+Atlético-MG,Cuello,Atacante,Fora,RBB,1.8,1.8,1,6.36,-0.64
+Atlético-MG,Lyanco,Zagueiro,Fora,RBB,0.0,0.0,0,9.0,0.0
+Atlético-MG,Rony,Atacante,Fora,RBB,0.0,0.0,0,8.0,0.0
+Atlético-MG,Bernard,Meia,Fora,RBB,-0.6,-0.6,1,4.7,-1.3
+Atlético-MG,Gustavo Scarpa,Meia,Fora,RBB,0.5,0.5,1,8.36,-1.64
+Corinthians,Matheuzinho,Lateral,Fora,CAP,4.8,4.8,1,11.5,-0.5
+Atlético-MG,Jorge Sampaoli,Técnico,Fora,RBB,3.81,3.81,1,8.7,-0.3
+Santos,Gabriel Menino,Meia,Casa,SAO,16.7,16.7,1,10.77,4.77
+Atlético-MG,Gabriel Delfim,Goleiro,Fora,RBB,0.0,0.0,0,2.0,0.0
+Atlético-MG,Alexsander,Meia,Fora,RBB,1.7,1.7,1,7.14,-0.86
+Corinthians,Carrillo,Meia,Fora,CAP,3.2,3.2,1,6.85,-0.15
+Grêmio,Luís Castro,Técnico,Casa,BOT,4.47,4.47,1,9.75,-0.25
+Botafogo,Villalba,Atacante,Fora,GRE,0.0,0.0,0,6.0,0.0
+Corinthians,Gustavo Henrique,Zagueiro,Fora,CAP,9.2,9.2,1,11.41,1.41
+Corinthians,Raniele,Meia,Fora,CAP,11.4,11.4,1,9.72,2.72
+Atlético-MG,Iván Román,Zagueiro,Fora,RBB,0.0,0.0,0,5.0,0.0
+Corinthians,Vitinho,Atacante,Fora,CAP,1.7,1.7,1,5.51,-0.49
+Atlético-MG,Natanael,Lateral,Fora,RBB,0.0,0.0,0,7.0,0.0
+Atlético-MG,Reinier,Meia,Fora,RBB,1.7,1.7,1,3.87,-0.13
+Atlético-MG,Patrick,Meia,Fora,RBB,0.0,0.0,0,4.0,0.0
+Grêmio,Cuéllar,Meia,Casa,BOT,0.0,0.0,0,5.0,0.0
+Corinthians,Memphis Depay,Atacante,Fora,CAP,3.7,3.7,1,15.21,-1.79
+Corinthians,Angileri,Lateral,Fora,CAP,0.0,0.0,0,4.0,0.0
+Corinthians,André Ramalho,Zagueiro,Fora,CAP,0.0,0.0,0,6.0,0.0
+Atlético-MG,Cadu,Atacante,Fora,RBB,0.0,0.0,0,3.0,0.0
+Corinthians,Hugo Souza,Goleiro,Fora,CAP,2.2,2.2,1,9.77,-1.23
+Internacional,Félix Torres,Zagueiro,Fora,FLA,-0.1,-0.1,1,3.24,-0.76
+Corinthians,Matheus Donelli,Goleiro,Fora,CAP,0.0,0.0,0,3.0,0.0
+Corinthians,Charles,Meia,Fora,CAP,0.0,0.0,0,4.0,0.0
+Corinthians,Breno Bidon,Meia,Fora,CAP,14.7,14.7,1,13.34,3.34
+Corinthians,Matheus Bidu,Lateral,Fora,CAP,5.1,5.1,1,9.15,0.15
+Corinthians,Pedro Raul,Atacante,Fora,CAP,0.0,0.0,1,4.91,-1.09
+Corinthians,Garro,Meia,Fora,CAP,10.0,10.0,1,13.32,1.32
+Corinthians,Hugo,Lateral,Fora,CAP,0.0,0.0,0,4.0,0.0
+Corinthians,André,Meia,Fora,CAP,6.5,6.5,1,5.55,1.55
+Corinthians,Kayke,Atacante,Fora,CAP,0.0,0.0,0,4.0,0.0
+Corinthians,Cacá,Zagueiro,Fora,CAP,0.0,0.0,0,5.0,0.0
+Cruzeiro,Lucas Romero,Meia,Casa,CFC,2.2,2.2,1,8.95,-1.05
+Corinthians,José Martínez,Meia,Fora,CAP,0.0,0.0,0,6.0,0.0
+Corinthians,Bahia,Meia,Fora,CAP,0.0,0.0,0,2.0,0.0
+Cruzeiro,William,Lateral,Casa,CFC,0.0,0.0,0,12.0,0.0
+Cruzeiro,Tite,Técnico,Casa,CFC,1.37,1.37,1,10.3,-1.7
+Corinthians,João Pedro,Zagueiro,Fora,CAP,0.0,0.0,0,5.0,0.0
+Corinthians,Felipe Longo,Goleiro,Fora,CAP,0.0,0.0,0,2.0,0.0
+Cruzeiro,Matheus Pereira,Meia,Casa,CFC,3.7,3.7,1,17.66,-2.34
+Corinthians,Gui Negão,Atacante,Fora,CAP,0.0,0.0,1,4.09,-0.91
+Corinthians,Ryan,Meia,Fora,CAP,0.0,0.0,0,3.0,0.0
+Cruzeiro,Fagner,Lateral,Casa,CFC,0.9,0.9,1,6.04,-0.96
+Cruzeiro,Walace,Meia,Casa,CFC,0.0,0.0,0,4.0,0.0
+Corinthians,Dieguinho,Meia,Fora,CAP,0.0,0.0,0,4.0,0.0
+Cruzeiro,Sinisterra,Atacante,Casa,CFC,0.0,0.0,0,6.0,0.0
+Cruzeiro,Lucas Silva,Meia,Casa,CFC,0.2,0.2,1,7.43,-1.57
+Cruzeiro,Matheus Cunha,Goleiro,Casa,CFC,0.0,0.0,0,3.0,0.0
+Cruzeiro,Matheus Henrique,Meia,Casa,CFC,1.5,1.5,1,7.07,-0.93
+Cruzeiro,Arroyo,Atacante,Casa,CFC,1.7,1.7,1,6.32,-0.68
+Cruzeiro,Jonathan Jesus,Zagueiro,Casa,CFC,0.0,0.0,1,4.91,-1.09
+Cruzeiro,Wanderson,Atacante,Casa,CFC,0.9,0.9,1,5.22,-0.78
+Cruzeiro,João Marcelo,Zagueiro,Casa,CFC,-0.3,-0.3,1,3.99,-1.01
+Cruzeiro,Kauã Prates,Lateral,Casa,CFC,0.0,0.0,0,4.0,0.0
+Cruzeiro,Otávio,Goleiro,Casa,CFC,0.0,0.0,0,2.0,0.0
+Cruzeiro,Rayan Lelis,Atacante,Casa,CFC,0.0,0.0,0,2.0,0.0
+Cruzeiro,Marquinhos,Atacante,Casa,CFC,0.0,0.0,0,4.0,0.0
+Cruzeiro,Kauã Moraes,Lateral,Casa,CFC,0.0,0.0,0,3.0,0.0
+Flamengo,Danilo,Zagueiro,Casa,INT,0.0,0.0,0,8.0,0.0
+Internacional,Borré,Atacante,Fora,FLA,2.4,2.4,1,7.39,-0.61
+Flamengo,Léo Pereira,Zagueiro,Casa,INT,0.1,0.1,1,10.67,-2.33
+Cruzeiro,Kaique Kenji,Atacante,Casa,CFC,-0.5,-0.5,1,2.28,-0.72
+Cruzeiro,Villarreal,Atacante,Casa,CFC,0.0,0.0,0,5.0,0.0
+Cruzeiro,Ryan Guilherme,Meia,Casa,CFC,0.0,0.0,0,2.0,0.0
+Flamengo,Varela,Lateral,Casa,INT,6.7,6.7,1,8.08,1.08
+Flamengo,Saúl,Meia,Casa,INT,0.0,0.0,0,7.0,0.0
+Cruzeiro,Murilo Rhikman,Meia,Casa,CFC,0.0,0.0,0,3.0,0.0
+Cruzeiro,Japa,Meia,Casa,CFC,0.0,0.0,0,3.0,0.0
+Flamengo,Bruno Henrique,Atacante,Casa,INT,0.8,0.8,1,7.64,-1.36
+Cruzeiro,Tevis,Atacante,Casa,CFC,0.0,0.0,0,2.0,0.0
+Flamengo,Everton,Atacante,Casa,INT,3.2,3.2,1,8.49,-0.51
+Flamengo,Jorginho,Meia,Casa,INT,-1.8,-1.8,1,11.64,-3.36
+Flamengo,Erick Pulgar,Meia,Casa,INT,3.5,3.5,1,9.41,-0.59
+Flamengo,Léo Ortiz,Zagueiro,Casa,INT,-0.3,-0.3,1,9.71,-2.29
+Flamengo,Luiz Araújo,Atacante,Casa,INT,0.0,0.0,0,10.0,0.0
+Flamengo,Emerson Royal,Lateral,Casa,INT,0.0,0.0,0,5.0,0.0
+Flamengo,Samuel Lino,Atacante,Casa,INT,6.5,6.5,1,9.64,0.64
+Flamengo,Evertton Araújo,Meia,Casa,INT,2.1,2.1,1,4.01,0.01
+Grêmio,João Pedro,Lateral,Casa,BOT,0.4,0.4,1,4.23,-0.77
+Flamengo,Plata,Atacante,Casa,INT,10.6,10.6,1,9.44,2.44
+Flamengo,De la Cruz,Meia,Casa,INT,0.0,0.0,0,8.0,0.0
+Flamengo,Filipe Luís,Técnico,Casa,INT,3.95,3.95,1,11.2,-0.8
+Flamengo,Ayrton Lucas,Lateral,Casa,INT,0.0,0.0,0,8.0,0.0
+Flamengo,Allan,Meia,Casa,INT,0.0,0.0,0,5.0,0.0
+Flamengo,Iago,Zagueiro,Casa,INT,0.0,0.0,0,2.0,0.0
+Flamengo,Dyogo Alves,Goleiro,Casa,INT,0.0,0.0,0,3.0,0.0
+Flamengo,Daniel Sales,Lateral,Casa,INT,0.0,0.0,0,2.0,0.0
+Flamengo,Léo Nannetti,Goleiro,Casa,INT,0.0,0.0,0,2.0,0.0
+Fluminense,Samuel Xavier,Lateral,Fora,BAH,3.7,3.7,1,8.66,-0.34
+Flamengo,Douglas Telles,Atacante,Casa,INT,0.0,0.0,0,2.0,0.0
+Flamengo,João Victor,Zagueiro,Casa,INT,0.0,0.0,0,2.0,0.0
+Fluminense,Everaldo,Atacante,Fora,BAH,0.9,0.9,1,4.41,-0.59
+Fluminense,Ganso,Meia,Fora,BAH,-0.3,-0.3,1,5.62,-1.38
+Flamengo,Wallace Yan,Atacante,Casa,INT,0.0,0.0,0,5.0,0.0
+Flamengo,Da Mata,Zagueiro,Casa,INT,0.0,0.0,0,2.0,0.0
+Flamengo,Joshua,Meia,Casa,INT,0.0,0.0,0,3.0,0.0
+Fluminense,Renê,Lateral,Fora,BAH,7.4,7.4,1,7.5,1.5
+Flamengo,Guilherme Gomes,Meia,Casa,INT,0.0,0.0,0,3.0,0.0
+Fluminense,Guilherme Arana,Lateral,Fora,BAH,0.0,0.0,0,10.0,0.0
+Fluminense,Nonato,Meia,Fora,BAH,6.4,6.4,1,7.15,1.15
+Fluminense,Marcelo Pitaluga,Goleiro,Fora,BAH,0.0,0.0,0,3.0,0.0
+Fluminense,Cano,Atacante,Fora,BAH,0.0,0.0,0,6.0,0.0
+Fluminense,Vitor Eudes,Goleiro,Fora,BAH,0.0,0.0,0,2.0,0.0
+Fluminense,Lima,Meia,Fora,BAH,0.0,0.0,0,6.0,0.0
+Fluminense,Otávio,Meia,Fora,BAH,0.0,0.0,0,4.0,0.0
+Coritiba,Thiago Santos,Zagueiro,Fora,CRU,0.0,0.0,1,2.45,-0.55
+Fluminense,Guga,Lateral,Fora,BAH,0.0,0.0,0,6.0,0.0
+Coritiba,Keno,Atacante,Fora,CRU,0.0,0.0,0,6.0,0.0
+Fluminense,Luis Zubeldía,Técnico,Fora,BAH,5.55,5.55,1,9.31,0.31
+Fluminense,Canobbio,Atacante,Fora,BAH,5.7,5.7,1,8.54,0.54
+Fluminense,John Kennedy,Atacante,Fora,BAH,1.6,1.6,1,5.47,-0.53
+Fluminense,Igor Rabello,Zagueiro,Fora,BAH,0.0,0.0,0,5.0,0.0
+Fluminense,Soteldo,Atacante,Fora,BAH,0.0,0.0,0,6.0,0.0
+Fluminense,Freytes,Zagueiro,Fora,BAH,1.2,1.2,1,4.51,-0.49
+Fluminense,Ignácio,Zagueiro,Fora,BAH,0.0,0.0,0,6.0,0.0
+Fluminense,Gabriel Fuentes,Lateral,Fora,BAH,0.0,0.0,0,4.0,0.0
+Fluminense,Hércules,Meia,Fora,BAH,0.0,0.0,0,7.0,0.0
+Grêmio,Marcos Rocha,Lateral,Casa,BOT,0.0,0.0,1,7.36,-1.64
+Fluminense,Serna,Atacante,Fora,BAH,0.5,0.5,1,7.54,-1.46
+Grêmio,Edenílson,Meia,Casa,BOT,2.5,2.5,1,6.6,-0.4
+Grêmio,Willian,Meia,Casa,BOT,-0.3,-0.3,1,4.8,-1.2
+Bragantino,Tiago Volpi,Goleiro,Casa,CAM,0.0,0.0,0,8.0,0.0
+Fluminense,Lelê,Atacante,Fora,BAH,0.0,0.0,0,3.0,0.0
+Grêmio,Kannemann,Zagueiro,Casa,BOT,0.0,0.0,0,5.0,0.0
+Fluminense,Riquelme Felipe,Atacante,Fora,BAH,0.0,0.0,0,4.0,0.0
+Fluminense,Santi Moreno,Atacante,Fora,BAH,-0.3,-0.3,1,3.17,-0.83
+Fluminense,Lezcano,Meia,Fora,BAH,0.0,0.0,0,4.0,0.0
+Corinthians,Dorival Júnior,Técnico,Fora,CAP,6.6,6.6,1,11.31,0.31
+Fluminense,Luan Freitas,Zagueiro,Fora,BAH,0.0,0.0,0,3.0,0.0
+Grêmio,Cristaldo,Meia,Casa,BOT,0.0,0.0,0,6.0,0.0
+Grêmio,Marlon,Lateral,Casa,BOT,4.6,4.6,1,8.16,0.16
+São Paulo,Young,Goleiro,Fora,SAN,0.0,0.0,0,3.0,0.0
+Fluminense,Julio Fidélis,Lateral,Fora,BAH,0.0,0.0,0,2.0,0.0
+Grêmio,Arthur Melo,Meia,Casa,BOT,5.7,5.7,1,10.18,0.18
+Grêmio,Caio Paulista,Lateral,Casa,BOT,0.0,0.0,0,5.0,0.0
+Grêmio,Balbuena,Zagueiro,Casa,BOT,0.0,0.0,0,7.0,0.0
+Flamengo,Arrascaeta,Meia,Casa,INT,0.8,0.8,1,19.1,-3.9
+Fluminense,Bernal,Meia,Fora,BAH,-0.3,-0.3,1,3.99,-1.01
+Grêmio,Gustavo Martins,Zagueiro,Casa,BOT,10.2,10.2,1,8.49,2.49
+Grêmio,Carlos Vinícius,Atacante,Casa,BOT,12.0,12.0,1,18.12,1.12
+Grêmio,Gabriel Grando,Goleiro,Casa,BOT,0.0,0.0,0,4.0,0.0
+Grêmio,Dodi,Meia,Casa,BOT,-1.1,-1.1,1,4.52,-1.48
+Grêmio,Wagner Leonardo,Zagueiro,Casa,BOT,3.9,3.9,1,6.28,0.28
+Grêmio,Pavón,Atacante,Casa,BOT,2.9,2.9,1,5.93,-0.07
+Internacional,Bruno Henrique,Meia,Fora,FLA,2.2,2.2,1,5.68,-0.32
+Grêmio,Amuzu,Atacante,Casa,BOT,1.7,1.7,1,5.51,-0.49
+Grêmio,Villasanti,Meia,Casa,BOT,0.0,0.0,0,7.0,0.0
+Grêmio,André,Atacante,Casa,BOT,-1.0,-1.0,1,2.92,-1.08
+Grêmio,Monsalve,Meia,Casa,BOT,0.0,0.0,0,5.0,0.0
+Internacional,Mercado,Zagueiro,Fora,FLA,0.0,0.0,0,5.0,0.0
+Grêmio,Riquelme,Meia,Casa,BOT,0.0,0.0,0,4.0,0.0
+Grêmio,Aravena,Atacante,Casa,BOT,0.0,0.0,0,4.0,0.0
+Internacional,Juninho,Zagueiro,Fora,FLA,0.0,0.0,0,5.0,0.0
+Internacional,Ronaldo,Meia,Fora,FLA,0.2,0.2,1,2.52,-0.48
+Grêmio,Ronald,Meia,Casa,BOT,0.0,0.0,0,3.0,0.0
+Grêmio,Thiago Beltrame,Goleiro,Casa,BOT,0.0,0.0,0,2.0,0.0
+Internacional,Carbonero,Atacante,Fora,FLA,0.5,0.5,1,7.54,-1.46
+Internacional,Aguirre,Lateral,Fora,FLA,2.7,2.7,1,5.04,0.04
+Grêmio,Viery,Zagueiro,Casa,BOT,0.0,0.0,0,3.0,0.0
+Internacional,Victor Gabriel,Zagueiro,Fora,FLA,3.0,3.0,1,4.32,0.32
+Internacional,Bruno Tabata,Meia,Fora,FLA,0.5,0.5,1,4.27,-0.73
+Internacional,Vitinho,Atacante,Fora,FLA,1.9,1.9,1,6.39,-0.61
+Internacional,Alan Benítez,Lateral,Fora,FLA,0.0,0.0,0,4.0,0.0
+Internacional,Paulo Pezzolano,Técnico,Fora,FLA,2.26,2.26,1,5.7,-0.3
+Internacional,Bruno Gomes,Meia,Fora,FLA,5.1,5.1,1,6.7,0.7
+Internacional,Richard,Meia,Fora,FLA,0.0,0.0,0,4.0,0.0
+Remo,Ivan,Goleiro,Casa,MIR,0.0,0.0,0,4.0,0.0
+Palmeiras,Felipe Anderson,Meia,Casa,VIT,0.0,0.0,0,9.0,0.0
+Palmeiras,Gustavo Gómez,Zagueiro,Casa,VIT,1.9,1.9,1,11.3,-1.7
+Palmeiras,Marcelo Lomba,Goleiro,Casa,VIT,0.0,0.0,0,4.0,0.0
+Internacional,Anthoni,Goleiro,Fora,FLA,0.0,0.0,0,3.0,0.0
+Internacional,Thiago Maia,Meia,Fora,FLA,0.0,0.0,0,6.0,0.0
+Palmeiras,Marlon Freitas,Meia,Casa,VIT,1.4,1.4,1,7.85,-1.15
+Grêmio,Weverton,Goleiro,Casa,BOT,3.2,3.2,1,8.49,-0.51
+Internacional,Alan Rodríguez,Meia,Fora,FLA,0.0,0.0,0,6.0,0.0
+Internacional,Gustavo Prado,Meia,Fora,FLA,0.0,0.0,0,4.0,0.0
+Internacional,Clayton Sampaio,Zagueiro,Fora,FLA,0.0,0.0,0,3.0,0.0
+Palmeiras,Raphael Veiga,Meia,Casa,VIT,0.0,0.0,0,11.0,0.0
+Palmeiras,Maurício,Meia,Casa,VIT,-0.8,-0.8,1,6.27,-1.73
+Palmeiras,Piquerez,Lateral,Casa,VIT,5.3,5.3,1,10.04,0.04
+Palmeiras,Murilo,Zagueiro,Casa,VIT,-0.9,-0.9,1,5.41,-1.59
+Palmeiras,Abel Ferreira,Técnico,Casa,VIT,3.66,3.66,1,11.1,-0.9
+Palmeiras,Lucas Evangelista,Meia,Casa,VIT,0.0,0.0,0,7.0,0.0
+Internacional,Raykkonen,Atacante,Fora,FLA,0.5,0.5,1,2.63,-0.37
+Vasco,Thiago Mendes,Meia,Casa,CHA,4.5,4.5,1,7.31,0.31
+Palmeiras,Bruno Fuchs,Zagueiro,Casa,VIT,0.0,0.0,0,8.0,0.0
+Palmeiras,Carlos Miguel,Goleiro,Casa,VIT,-0.7,-0.7,1,7.12,-1.88
+Palmeiras,Flaco López,Atacante,Casa,VIT,16.1,16.1,1,18.74,2.74
+Palmeiras,Khellven,Lateral,Casa,VIT,0.2,0.2,1,5.8,-1.2
+Palmeiras,Paulinho,Atacante,Casa,VIT,0.0,0.0,0,15.0,0.0
+Palmeiras,Allan,Meia,Casa,VIT,1.9,1.9,1,13.76,-2.24
+Palmeiras,Bruno Rodrigues,Atacante,Casa,VIT,0.0,0.0,0,4.0,0.0
+Mirassol,Alex Muralha,Goleiro,Fora,REM,0.0,0.0,0,3.0,0.0
+Mirassol,Daniel Borges,Lateral,Fora,REM,0.0,0.0,0,4.0,0.0
+Palmeiras,Emiliano Martínez,Meia,Casa,VIT,0.0,0.0,0,5.0,0.0
+Palmeiras,Jefté,Lateral,Casa,VIT,0.0,0.0,0,4.0,0.0
+Mirassol,André Luis,Atacante,Fora,REM,0.0,0.0,0,5.0,0.0
+Palmeiras,Luighi,Atacante,Casa,VIT,0.0,0.0,1,3.27,-0.73
+Palmeiras,Giay,Lateral,Casa,VIT,0.5,0.5,1,5.9,-1.1
+Mirassol,João Victor,Zagueiro,Fora,REM,1.5,1.5,1,5.44,-0.56
+Mirassol,Lucas Ramon,Lateral,Fora,REM,0.0,0.0,0,7.0,0.0
+Palmeiras,Benedetti,Zagueiro,Casa,VIT,0.0,0.0,0,3.0,0.0
+Palmeiras,Larson,Meia,Casa,VIT,0.0,0.0,0,3.0,0.0
+Mirassol,Neto Moura,Meia,Fora,REM,0.5,0.5,1,4.27,-0.73
+Mirassol,Alesson,Atacante,Fora,REM,9.7,9.7,1,9.13,2.13
+Mirassol,Yuri Lara,Meia,Fora,REM,5.5,5.5,1,6.02,1.02
+Mirassol,Thomazella,Goleiro,Fora,REM,0.0,0.0,0,2.0,0.0
+Mirassol,Negueba,Atacante,Fora,REM,4.8,4.8,1,6.59,0.59
+Mirassol,Shaylon,Meia,Fora,REM,0.0,0.0,0,5.0,0.0
+Mirassol,Rafael Guanaes,Técnico,Fora,REM,4.8,4.8,1,6.59,0.59
+Mirassol,Renato Marques,Atacante,Fora,REM,2.1,2.1,1,4.01,0.01
+Santos,Gabriel,Atacante,Casa,SAO,0.0,0.0,0,9.0,0.0
+Mirassol,Aldo Filho,Meia,Fora,REM,-0.6,-0.6,1,3.88,-1.12
+Mirassol,Carlos Eduardo,Atacante,Fora,REM,0.0,0.0,0,5.0,0.0
+Santos,Zé Rafael,Meia,Casa,SAO,7.9,7.9,1,8.5,1.5
+Santos,João Schmidt,Meia,Casa,SAO,3.2,3.2,1,6.03,0.03
+Mirassol,Luiz Otávio,Zagueiro,Fora,REM,1.5,1.5,1,3.8,-0.2
+Mirassol,Nathan Fogaça,Atacante,Fora,REM,-0.9,-0.9,1,2.96,-1.04
+Santos,Willian Arão,Meia,Casa,SAO,0.0,0.0,0,7.0,0.0
+Santos,João Basso,Zagueiro,Casa,SAO,0.0,0.0,0,4.0,0.0
+Mirassol,Edson Carioca,Atacante,Fora,REM,0.0,0.0,0,5.0,0.0
+Santos,Igor Vinícius,Lateral,Casa,SAO,5.5,5.5,1,7.66,0.66
+Santos,Rincón,Meia,Casa,SAO,0.0,0.0,0,4.0,0.0
+Santos,Luan Peres,Zagueiro,Casa,SAO,1.7,1.7,1,5.51,-0.49
+Santos,Zé Ivaldo,Zagueiro,Casa,SAO,0.0,0.0,0,6.0,0.0
+Santos,Mayke,Lateral,Casa,SAO,0.0,0.0,0,5.0,0.0
+Santos,Rollheiser,Meia,Casa,SAO,2.5,2.5,1,8.24,-0.76
+Santos,Juan Vojvoda,Técnico,Casa,SAO,5.21,5.21,1,8.37,0.37
+Santos,Escobar,Lateral,Casa,SAO,0.0,0.0,0,6.0,0.0
+Santos,Tiquinho Soares,Atacante,Casa,SAO,0.0,0.0,0,7.0,0.0
+Santos,Thaciano,Meia,Casa,SAO,0.0,0.0,0,6.0,0.0
+Santos,Adonis Frías,Zagueiro,Casa,SAO,0.0,0.0,0,6.0,0.0
+Santos,Lautaro Díaz,Atacante,Casa,SAO,5.8,5.8,1,6.94,0.94
+Santos,Souza,Lateral,Casa,SAO,0.0,0.0,0,8.0,0.0
+Santos,Diógenes,Goleiro,Casa,SAO,0.0,0.0,0,2.0,0.0
+Santos,Gabriel Bontempo,Meia,Casa,SAO,0.0,0.0,1,4.09,-0.91
+Santos,Alexis Duarte,Zagueiro,Casa,SAO,-1.3,-1.3,1,3.64,-1.36
+Santos,Vinicius Lira,Lateral,Casa,SAO,3.5,3.5,1,3.68,0.68
+São Paulo,Lucas Moura,Meia,Fora,SAN,-0.3,-0.3,1,9.71,-2.29
+São Paulo,Rafael Tolói,Zagueiro,Fora,SAN,0.0,0.0,0,5.0,0.0
+São Paulo,Alan Franco,Zagueiro,Fora,SAN,3.2,3.2,1,6.85,-0.15
+São Paulo,Calleri,Atacante,Fora,SAN,0.4,0.4,1,11.59,-2.41
+São Paulo,Danielzinho,Meia,Fora,SAN,7.6,7.6,1,8.39,1.39
+Santos,Robinho Jr.,Atacante,Casa,SAO,0.0,0.0,1,3.27,-0.73
+São Paulo,Arboleda,Zagueiro,Fora,SAN,7.5,7.5,1,10.81,0.81
+São Paulo,Wendell,Lateral,Fora,SAN,0.0,0.0,0,7.0,0.0
+São Paulo,Cédric Soares,Lateral,Fora,SAN,2.3,2.3,1,5.72,-0.28
+São Paulo,Hernán Crespo,Técnico,Fora,SAN,7.59,7.59,1,8.39,1.39
+Vasco,Fernando Diniz,Técnico,Casa,CHA,4.0,4.0,1,7.95,-0.05
+São Paulo,Alisson,Meia,Fora,SAN,0.0,0.0,0,6.0,0.0
+São Paulo,Sabino,Zagueiro,Fora,SAN,5.2,5.2,1,5.91,0.91
+São Paulo,Marcos Antônio,Meia,Fora,SAN,7.5,7.5,1,9.18,1.18
+São Paulo,Bobadilla,Meia,Fora,SAN,6.2,6.2,1,10.36,0.36
+São Paulo,Coronel,Goleiro,Fora,SAN,0.0,0.0,0,5.0,0.0
+São Paulo,Ferreira,Atacante,Fora,SAN,0.0,0.0,0,8.0,0.0
+Palmeiras,Ramón Sosa,Atacante,Casa,VIT,1.7,1.7,1,6.32,-0.68
+São Paulo,Maik,Lateral,Fora,SAN,2.7,2.7,1,5.04,0.04
+Remo,Patrick de Paula,Meia,Casa,MIR,1.8,1.8,1,4.72,-0.28
+São Paulo,Tapia,Atacante,Fora,SAN,1.5,1.5,1,5.44,-0.56
+São Paulo,André Silva,Atacante,Fora,SAN,0.0,0.0,0,8.0,0.0
+Vasco,David,Atacante,Casa,CHA,0.0,0.0,0,5.0,0.0
+Bragantino,Rodriguinho,Meia,Casa,CAM,0.0,0.0,0,4.0,0.0
+São Paulo,Ryan Francisco,Atacante,Fora,SAN,0.0,0.0,0,5.0,0.0
+Vasco,Puma Rodríguez,Lateral,Casa,CHA,6.4,6.4,1,6.34,1.34
+São Paulo,Lucca,Atacante,Fora,SAN,0.0,0.0,0,3.0,0.0
+São Paulo,Pablo Maia,Meia,Fora,SAN,0.0,0.0,1,5.73,-1.27
+Vasco,Jair,Meia,Casa,CHA,0.0,0.0,0,6.0,0.0
+Vasco,Daniel Fuzato,Goleiro,Casa,CHA,0.0,0.0,0,2.0,0.0
+Vasco,Carlos Cuesta,Zagueiro,Casa,CHA,-1.1,-1.1,1,6.98,-2.02
+Vasco,Paulo Henrique,Lateral,Casa,CHA,0.0,0.0,0,10.0,0.0
+São Paulo,Ferraresi,Zagueiro,Fora,SAN,0.0,0.0,0,8.0,0.0
+Vasco,Victor Luis,Lateral,Casa,CHA,0.0,0.0,0,4.0,0.0
+Vasco,Andrés Gómez,Atacante,Casa,CHA,6.0,6.0,1,9.47,0.47
+Vasco,Robert Renan,Zagueiro,Casa,CHA,1.9,1.9,1,7.21,-0.79
+Vasco,Lucas Piton,Lateral,Casa,CHA,-0.3,-0.3,1,7.26,-1.74
+Vasco,Tchê Tchê,Meia,Casa,CHA,0.0,0.0,0,6.0,0.0
+Vasco,Nuno Moreira,Meia,Casa,CHA,0.7,0.7,1,6.79,-1.21
+Vasco,Lucas Freitas,Zagueiro,Casa,CHA,0.0,0.0,0,4.0,0.0
+Vasco,Barros,Meia,Casa,CHA,9.0,9.0,1,7.25,2.25
+Vasco,Adson,Meia,Casa,CHA,0.0,0.0,0,6.0,0.0
+Vitória,Caíque,Meia,Fora,PAL,0.4,0.4,1,5.05,-0.95
+Vasco,Vegetti,Atacante,Casa,CHA,0.0,0.0,0,11.0,0.0
+Vasco,Hugo Moura,Meia,Casa,CHA,0.0,0.0,0,4.0,0.0
+Vasco,Mateus Carvalho,Meia,Casa,CHA,0.0,0.0,0,4.0,0.0
+Vitória,Matheuzinho,Meia,Fora,PAL,4.0,4.0,1,6.31,0.31
+Vitória,Zé Marcos,Zagueiro,Fora,PAL,4.1,4.1,1,5.53,0.53
+Vasco,Garré,Meia,Casa,CHA,0.0,0.0,0,4.0,0.0
+Vitória,Jair Ventura,Técnico,Fora,PAL,9.26,9.26,1,7.34,2.34
+Vitória,Camutanga,Zagueiro,Fora,PAL,9.5,9.5,1,7.42,2.42
+Vitória,Baralhas,Meia,Fora,PAL,10.9,10.9,1,8.73,2.73
+Vasco,Matheus França,Meia,Casa,CHA,0.8,0.8,1,3.55,-0.45
+Vitória,Ramon,Lateral,Fora,PAL,4.7,4.7,1,5.74,0.74
+Vitória,Neris,Zagueiro,Fora,PAL,0.0,0.0,0,3.0,0.0
+Vitória,Cantalapiedra,Meia,Fora,PAL,0.5,0.5,1,5.9,-1.1
+Vitória,Renato Kayzer,Atacante,Fora,PAL,10.4,10.4,1,8.56,2.56
+Vitória,Claudinho,Lateral,Fora,PAL,0.0,0.0,0,4.0,0.0
+Vitória,Thiago Couto,Goleiro,Fora,PAL,0.0,0.0,0,3.0,0.0
+Vitória,Mateus Silva,Lateral,Fora,PAL,9.7,9.7,1,5.86,2.86
+Vitória,Osvaldo,Atacante,Fora,PAL,0.8,0.8,1,4.37,-0.63
+Vitória,Lucas Arcanjo,Goleiro,Fora,PAL,0.0,0.0,0,4.0,0.0
+Vitória,Ronald Lopes,Meia,Fora,PAL,0.0,0.0,0,5.0,0.0
+Vitória,Paulo Roberto,Lateral,Fora,PAL,0.0,0.0,0,3.0,0.0
+Vitória,Dudu,Meia,Fora,PAL,-0.3,-0.3,1,3.17,-0.83
+Vitória,Jamerson,Lateral,Fora,PAL,6.5,6.5,1,5.55,1.55
+Athlético-PR,Jadson,Meia,Casa,COR,0.5,0.5,1,5.08,-0.92
+Vitória,Kike Saverio,Atacante,Fora,PAL,0.0,0.0,0,5.0,0.0
+Athlético-PR,Mendoza,Atacante,Casa,COR,8.2,8.2,1,7.78,1.78
+Vitória,Rúben Rodrigues,Meia,Fora,PAL,0.0,0.0,0,5.0,0.0
+Vitória,Edenílson,Meia,Fora,PAL,0.0,0.0,0,3.0,0.0
+Athlético-PR,Julimar,Atacante,Casa,COR,0.8,0.8,1,3.55,-0.45
+Vitória,Rúben Ismael,Meia,Fora,PAL,0.0,0.0,0,4.0,0.0
+Athlético-PR,Madson,Lateral,Casa,COR,0.0,0.0,0,5.0,0.0
+Vitória,Renzo López,Atacante,Fora,PAL,0.0,0.0,0,3.0,0.0
+Athlético-PR,Odair Hellmann,Técnico,Casa,COR,8.09,8.09,1,6.93,1.93
+Vitória,Felipe Cardoso,Meia,Fora,PAL,0.0,0.0,0,3.0,0.0
+Athlético-PR,Mastriani,Atacante,Casa,COR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Léo,Zagueiro,Casa,COR,4.7,4.7,1,5.74,0.74
+Athlético-PR,Esquivel,Lateral,Casa,COR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Belezi,Zagueiro,Casa,COR,0.0,0.0,0,3.0,0.0
+Athlético-PR,Benavídez,Lateral,Casa,COR,9.2,9.2,1,6.5,2.5
+Athlético-PR,Léo Derik,Lateral,Casa,COR,10.0,10.0,1,5.14,3.14
+Athlético-PR,Terán,Zagueiro,Casa,COR,7.7,7.7,1,5.97,1.97
+Athlético-PR,Mycael,Goleiro,Casa,COR,0.0,0.0,0,5.0,0.0
+Athlético-PR,Felipinho,Meia,Casa,COR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Luiz Fernando,Atacante,Casa,COR,-0.3,-0.3,1,3.99,-1.01
+Athlético-PR,Aguirre,Zagueiro,Casa,COR,6.7,6.7,1,5.62,1.62
+Athlético-PR,Raul,Meia,Casa,COR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Renan Peixoto,Atacante,Casa,COR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Renan Viana,Atacante,Casa,COR,0.0,0.0,0,2.0,0.0
+Athlético-PR,Habraão,Zagueiro,Casa,COR,0.0,0.0,0,3.0,0.0
+Athlético-PR,Dudu,Meia,Casa,COR,0.0,0.0,1,0.82,-0.18
+Athlético-PR,Batata,Lateral,Casa,COR,0.0,0.0,0,1.0,0.0
+Athlético-PR,Viveros,Atacante,Casa,COR,10.2,10.2,1,9.3,2.3
+Athlético-PR,Isaac,Atacante,Casa,COR,0.0,0.0,0,2.0,0.0
+Athlético-PR,João Cruz,Meia,Casa,COR,0.0,0.0,0,5.0,0.0
+Athlético-PR,Zapelli,Meia,Casa,COR,2.5,2.5,1,5.79,-0.21
+Athlético-PR,Felipe Chiqueti,Meia,Casa,COR,0.0,0.0,0,1.0,0.0
+Coritiba,Gabriel Leite,Goleiro,Fora,CRU,0.0,0.0,0,3.0,0.0
+Coritiba,Willian Oliveira,Meia,Fora,CRU,7.9,7.9,1,6.86,1.86
+Athlético-PR,Leozinho,Atacante,Casa,COR,0.0,0.0,0,3.0,0.0
+Athlético-PR,Portilla,Meia,Casa,COR,-1.4,-1.4,1,3.6,-1.4
+Coritiba,Pedro Rocha,Atacante,Fora,CRU,2.8,2.8,1,6.71,-0.29
+Coritiba,Rodrigo Moledo,Zagueiro,Fora,CRU,0.0,0.0,0,3.0,0.0
+Coritiba,Bruno Melo,Lateral,Fora,CRU,2.1,2.1,1,4.01,0.01
+Athlético-PR,Carlos Eduardo,Goleiro,Casa,COR,0.0,0.0,0,1.0,0.0
+Coritiba,Maicon,Zagueiro,Fora,CRU,1.7,1.7,1,4.69,-0.31
+Athlético-PR,Alejandro García,Meia,Casa,COR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Matheus Soares,Goleiro,Casa,COR,0.0,0.0,0,1.0,0.0
+Coritiba,Tinga,Lateral,Fora,CRU,5.0,5.0,1,5.84,0.84
+Coritiba,Pedro Rangel,Goleiro,Fora,CRU,0.0,0.0,0,3.0,0.0
+Athlético-PR,Marcão,Zagueiro,Casa,COR,0.0,0.0,0,3.0,0.0
+Athlético-PR,Élan Ricardo,Meia,Casa,COR,0.0,0.0,0,3.0,0.0
+Coritiba,Josué,Meia,Fora,CRU,-1.0,-1.0,1,4.56,-1.44
+Coritiba,Sebastián Gómez,Meia,Fora,CRU,2.0,2.0,1,3.97,-0.03
+Coritiba,Jacy,Zagueiro,Fora,CRU,2.0,2.0,1,3.16,0.16
+Coritiba,Lavega,Atacante,Fora,CRU,1.5,1.5,1,2.98,-0.02
+Coritiba,Fernando Seabra,Técnico,Fora,CRU,4.32,4.32,1,4.79,0.79
+Coritiba,Lucas Ronier,Atacante,Fora,CRU,5.0,5.0,1,5.03,1.03
+Coritiba,Pedro Morisco,Goleiro,Fora,CRU,11.7,11.7,1,9.01,3.01
+Coritiba,Wallisson,Meia,Fora,CRU,4.2,4.2,1,3.93,0.93
+Coritiba,Fernando Sobral,Meia,Fora,CRU,0.0,0.0,0,5.0,0.0
+Coritiba,Tiago Cóser,Zagueiro,Fora,CRU,1.5,1.5,1,2.16,0.16
+Coritiba,Felipe Guimarães,Lateral,Fora,CRU,0.0,0.0,0,1.0,0.0
+Coritiba,João Almeida,Lateral,Fora,CRU,0.0,0.0,0,1.0,0.0
+Coritiba,Ruan Assis,Atacante,Fora,CRU,0.0,0.0,0,1.0,0.0
+Coritiba,Vini Paulista,Meia,Fora,CRU,0.0,0.0,1,2.45,-0.55
+Remo,Marcelo Rangel,Goleiro,Casa,MIR,3.2,3.2,1,4.39,0.39
+Remo,Ygor Vinhas,Goleiro,Casa,MIR,0.0,0.0,0,3.0,0.0
+Coritiba,Benassi,Goleiro,Fora,CRU,0.0,0.0,0,1.0,0.0
+Remo,Jorge,Lateral,Casa,MIR,0.0,0.0,0,4.0,0.0
+Coritiba,Lucas Taverna,Lateral,Fora,CRU,0.0,0.0,0,1.0,0.0
+Coritiba,Thiago Azaf,Atacante,Fora,CRU,0.0,0.0,0,1.0,0.0
+Remo,Klaus,Zagueiro,Casa,MIR,0.0,0.0,0,4.0,0.0
+Coritiba,Jean Gabriel,Meia,Fora,CRU,0.0,0.0,0,2.0,0.0
+Remo,Panagiotis Tachtsidis,Meia,Casa,MIR,0.0,0.0,0,3.0,0.0
+Coritiba,Matheus Dias,Meia,Fora,CRU,0.0,0.0,0,1.0,0.0
+Remo,Dodô,Meia,Casa,MIR,-0.8,-0.8,1,2.17,-0.83
+Remo,João Lucas,Lateral,Casa,MIR,2.2,2.2,1,4.86,-0.14
+Remo,Giovanni Pavani,Meia,Casa,MIR,1.5,1.5,1,2.98,-0.02
+Remo,Cantillo,Meia,Casa,MIR,0.0,0.0,0,5.0,0.0
+Remo,Carlinhos,Atacante,Casa,MIR,0.0,0.0,0,4.0,0.0
+Remo,Marcelinho,Lateral,Casa,MIR,0.0,0.0,1,2.45,-0.55
+Remo,Sávio,Lateral,Casa,MIR,0.0,0.0,0,4.0,0.0
+Remo,Zé Ricardo,Meia,Casa,MIR,0.1,0.1,1,2.49,-0.51
+Remo,Jáderson,Meia,Casa,MIR,1.7,1.7,1,3.87,-0.13
+Remo,Marrony,Atacante,Casa,MIR,0.0,0.0,0,4.0,0.0
+Athlético-PR,Luiz Gustavo,Meia,Casa,COR,0.0,0.0,0,6.0,0.0
