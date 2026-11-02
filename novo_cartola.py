@@ -1,33 +1,24 @@
 #!/usr/bin/env python3
-"""Gera uma escalação e um resumo de confrontos para a rodada aberta do Cartola."""
+"""Atualiza dimensões/fatos do Cartola e calcula uma escalação projetada."""
 
-import csv
+from datetime import datetime, timezone
 import json
 import os
 import statistics
-import tempfile
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 
 BASE_URL = "https://api.cartolafc.globo.com"
-
-
-def resolve_output_dir(script_path):
-    script_dir = Path(script_path).resolve().parent
-    for candidate in (script_dir, *script_dir.parents):
-        if (candidate / "README.md").is_file() and (
-            (candidate / "Database").is_dir()
-            or (candidate / "data" / "processed").is_dir()
-        ):
-            return candidate / "data" / "processed"
-    return script_dir / "data" / "processed"
-
-
-OUTPUT_DIR = resolve_output_dir(__file__)
-FALLBACK_OUTPUT_DIR = Path.home() / "cartola_scout" / "data" / "processed"
+DDL_PATH = Path(__file__).resolve().with_name("cartola_schema.sql")
 SCOUTS = ("DS", "FC", "FS", "FD", "FF", "FT", "DE", "G")
+DATABASE_SCOUTS = ("DS", "G", "FS", "FC", "SG", "CV", "CA", "FD", "FF")
+HISTORY_TABLE = "estatisticas_jogadores"
+FIXTURES_TABLE = "proximos_confrontos"
+CLUB_DIMENSION = "dim_clubes"
+ATHLETE_DIMENSION = "dim_atletas"
+ROUND_DIMENSION = "dim_rodadas"
 MIN_JOGOS_RECENTES = 3
 MAX_JOGADORES_POR_TIME = 5
 
@@ -51,32 +42,6 @@ def mean(values, default=0.0):
     return statistics.mean(values) if values else default
 
 
-def ensure_output_dir():
-    configured_dir = os.environ.get("CARTOLA_OUTPUT_DIR")
-    candidates = (
-        [Path(configured_dir).expanduser()]
-        if configured_dir
-        else [OUTPUT_DIR, FALLBACK_OUTPUT_DIR]
-    )
-    errors = []
-    for directory in candidates:
-        try:
-            directory.mkdir(parents=True, exist_ok=True)
-            with tempfile.NamedTemporaryFile(dir=directory):
-                pass
-            return directory
-        except OSError as error:
-            errors.append(f"{directory}: {error}")
-            if configured_dir:
-                break
-
-    details = "; ".join(errors)
-    raise OSError(
-        "Não foi possível gravar os CSVs. Configure CARTOLA_OUTPUT_DIR para "
-        f"uma pasta gravável. Tentativas: {details}"
-    )
-
-
 def club_labels(clubs):
     labels = {}
     for key, club in clubs.items():
@@ -84,6 +49,10 @@ def club_labels(clubs):
         labels[club_id] = {
             "nome": club.get("apelido") or club.get("nome") or str(club_id),
             "sigla": club.get("abreviacao") or club.get("nome") or str(club_id),
+            "nome_api": club.get("nome") or str(club_id),
+            "apelido": club.get("apelido") or club.get("nome") or str(club_id),
+            "abreviacao": club.get("abreviacao"),
+            "slug": club.get("slug"),
         }
     return labels
 
@@ -95,9 +64,259 @@ def win_form(games):
     return wins, draws, losses
 
 
+def build_history_row(
+    round_number, season, athlete_id, athlete, fixture, clubs, positions
+):
+    club_id = athlete.get("clube_id")
+    home = fixture["clube_casa_id"] == club_id
+    opponent_id = (
+        fixture["clube_visitante_id"] if home else fixture["clube_casa_id"]
+    )
+    scout_values = athlete.get("scout") or {}
+    row = {
+        "temporada": season,
+        "rodada": round_number,
+        "atleta_id": int(athlete_id),
+        "time_id": club_id,
+        "adversario_id": opponent_id,
+        "partida_id": fixture.get("partida_id"),
+        "nome": athlete.get("apelido") or athlete.get("nome") or "N/A",
+        "posicao": positions.get(athlete.get("posicao_id"), "N/A"),
+        "status": "N/A",
+        "time": clubs.get(club_id, {}).get("nome", str(club_id)),
+        "jogo": "Mandante" if home else "Visitante",
+        "adversario": clubs.get(opponent_id, {}).get("nome", str(opponent_id)),
+        "pontuacao": float(athlete.get("pontuacao") or 0),
+    }
+    for scout in DATABASE_SCOUTS:
+        row[scout.lower()] = float(scout_values.get(scout) or 0)
+    return row
+
+
+def build_upcoming_rows(fixtures, clubs, season, round_number):
+    rows = []
+    for fixture in fixtures:
+        home_id = fixture["clube_casa_id"]
+        away_id = fixture["clube_visitante_id"]
+        rows.append(
+            {
+                "temporada": season,
+                "rodada": round_number,
+                "partida_id": fixture.get("partida_id"),
+                "meu_time_id": home_id,
+                "adversario_id": away_id,
+                "meu_time": clubs.get(home_id, {}).get("nome", str(home_id)),
+                "adversario": clubs.get(away_id, {}).get("nome", str(away_id)),
+                "condicao": "Mandante",
+            }
+        )
+        rows.append(
+            {
+                "temporada": season,
+                "rodada": round_number,
+                "partida_id": fixture.get("partida_id"),
+                "meu_time_id": away_id,
+                "adversario_id": home_id,
+                "meu_time": clubs.get(away_id, {}).get("nome", str(away_id)),
+                "adversario": clubs.get(home_id, {}).get("nome", str(home_id)),
+                "condicao": "Visitante",
+            }
+        )
+    return rows
+
+
+def build_dimension_rows(market, clubs, positions, status, round_number):
+    status_labels = {
+        2: "Dúvida",
+        3: "Suspenso",
+        5: "Contundido",
+        6: "Nulo",
+        7: "Provável",
+    }
+    club_rows = [
+        {
+            "clube_id": club_id,
+            "nome": details["nome_api"],
+            "apelido": details["apelido"],
+            "abreviacao": details["abreviacao"],
+            "slug": details["slug"],
+        }
+        for club_id, details in clubs.items()
+    ]
+    athlete_rows = []
+    for athlete in market.get("atletas", []):
+        position_id = athlete.get("posicao_id")
+        status_id = athlete.get("status_id")
+        athlete_rows.append(
+            {
+                "atleta_id": int(athlete["atleta_id"]),
+                "nome": athlete.get("nome") or athlete.get("apelido") or "N/A",
+                "apelido": athlete.get("apelido"),
+                "clube_id": athlete.get("clube_id"),
+                "posicao_id": position_id,
+                "posicao": positions.get(position_id, "N/A"),
+                "status_id": status_id,
+                "status": status_labels.get(status_id, "N/A"),
+                "media_num": athlete.get("media_num"),
+                "pontos_num": athlete.get("pontos_num"),
+                "jogos_num": athlete.get("jogos_num"),
+                "preco_num": athlete.get("preco_num"),
+                "variacao_num": athlete.get("variacao_num"),
+            }
+        )
+
+    season = int(status["temporada"])
+    round_rows = [
+        {
+            "temporada": season,
+            "rodada": completed_round,
+            "status": "Encerrada",
+            "status_mercado": None,
+            "fechamento": None,
+        }
+        for completed_round in range(1, round_number)
+    ]
+    closing_timestamp = status.get("fechamento", {}).get("timestamp")
+    round_rows.append(
+        {
+            "temporada": season,
+            "rodada": round_number,
+            "status": "Aberta" if status.get("status_mercado") == 1 else "Fechada",
+            "status_mercado": status.get("status_mercado"),
+            "fechamento": (
+                datetime.fromtimestamp(closing_timestamp, tz=timezone.utc)
+                if closing_timestamp
+                else None
+            ),
+        }
+    )
+    return club_rows, athlete_rows, round_rows
+
+
+def persist_postgres_tables(
+    database_url,
+    season,
+    current_round,
+    club_rows,
+    athlete_rows,
+    round_rows,
+    history_rows,
+    upcoming_rows,
+):
+    try:
+        from sqlalchemy import create_engine, text
+    except ImportError as error:
+        raise RuntimeError(
+            "Dependências PostgreSQL ausentes. Instale o requirements.txt."
+        ) from error
+
+    if not upcoming_rows:
+        raise RuntimeError("A API não retornou partidas; tabelas não foram alteradas.")
+
+    club_columns = ("clube_id", "nome", "apelido", "abreviacao", "slug")
+    athlete_columns = (
+        "atleta_id", "nome", "apelido", "clube_id", "posicao_id", "posicao",
+        "status_id", "status", "media_num", "pontos_num", "jogos_num",
+        "preco_num", "variacao_num",
+    )
+    round_columns = (
+        "temporada", "rodada", "status", "status_mercado", "fechamento"
+    )
+    history_columns = (
+        "temporada", "rodada", "atleta_id", "time_id", "adversario_id",
+        "partida_id", "nome", "posicao", "status", "time", "jogo",
+        "adversario", "pontuacao",
+        *(scout.lower() for scout in DATABASE_SCOUTS),
+    )
+    fixture_columns = (
+        "temporada", "rodada", "partida_id", "meu_time_id", "adversario_id",
+        "meu_time", "adversario", "condicao",
+    )
+
+    def upsert_statement(table, columns, key_columns):
+        quoted_columns = ", ".join(f'"{column}"' for column in columns)
+        parameters = ", ".join(f":{column}" for column in columns)
+        updates = ", ".join(
+            f'"{column}" = EXCLUDED."{column}"'
+            for column in columns
+            if column not in key_columns
+        )
+        return text(
+            f"INSERT INTO {table} ({quoted_columns}) VALUES ({parameters}) "
+            f"ON CONFLICT ({', '.join(key_columns)}) DO UPDATE SET "
+            f"{updates}, atualizado_em = NOW()"
+        )
+
+    club_upsert = upsert_statement(
+        CLUB_DIMENSION, club_columns, ("clube_id",)
+    )
+    athlete_upsert = upsert_statement(
+        ATHLETE_DIMENSION, athlete_columns, ("atleta_id",)
+    )
+    round_upsert = upsert_statement(
+        ROUND_DIMENSION, round_columns, ("temporada", "rodada")
+    )
+    history_insert = text(
+        f"INSERT INTO {HISTORY_TABLE} "
+        f"({', '.join(f'\"{column}\"' for column in history_columns)}) "
+        f"VALUES ({', '.join(f':{column}' for column in history_columns)})"
+    )
+    fixtures_insert = text(
+        f"INSERT INTO {FIXTURES_TABLE} "
+        f"({', '.join(f'\"{column}\"' for column in fixture_columns)}) "
+        f"VALUES ({', '.join(f':{column}' for column in fixture_columns)})"
+    )
+    engine = create_engine(database_url, pool_pre_ping=True)
+    try:
+        with engine.begin() as connection:
+            connection.exec_driver_sql(DDL_PATH.read_text(encoding="utf-8"))
+            connection.execute(club_upsert, club_rows)
+            connection.execute(athlete_upsert, athlete_rows)
+            connection.execute(round_upsert, round_rows)
+
+            last_round = connection.execute(
+                text(
+                    f"""
+                    SELECT GREATEST(
+                        COALESCE((
+                            SELECT MAX(rodada) FROM {HISTORY_TABLE}
+                            WHERE temporada = :temporada
+                        ), 0),
+                        COALESCE((
+                            SELECT MAX(rodada) FROM {HISTORY_TABLE}
+                            WHERE temporada IS NULL AND rodada <= :rodada_atual
+                        ), 0)
+                    )
+                    """
+                ),
+                {"temporada": season, "rodada_atual": current_round},
+            ).scalar() or 0
+            new_history = [
+                row
+                for row in history_rows
+                if row["rodada"] > int(last_round)
+            ]
+            if new_history:
+                connection.execute(history_insert, new_history)
+
+            connection.execute(text(f"DELETE FROM {FIXTURES_TABLE}"))
+            connection.execute(fixtures_insert, upcoming_rows)
+    finally:
+        engine.dispose()
+
+    return len(new_history), int(last_round)
+
+
 def main():
+    database_url = os.environ.get("CARTOLA_DATABASE_URL")
+    if not database_url:
+        raise RuntimeError(
+            "Defina CARTOLA_DATABASE_URL para atualizar o PostgreSQL."
+        )
+
     status = get_json("/mercado/status")
     round_number = int(status["rodada_atual"])
+    season = int(status["temporada"])
     market = get_json("/atletas/mercado")
     fixtures_response = get_json(f"/partidas/{round_number}")
 
@@ -138,12 +357,20 @@ def main():
     player_history = {}
     opponent_points = {}
     team_round_scouts = {}
+    database_history_rows = []
     for round_data in player_rounds:
         played_round = int(round_data["rodada"])
         for athlete_id, athlete in round_data.get("atletas", {}).items():
             club_id = athlete.get("clube_id")
             fixture = fixture_by_club_round.get((played_round, club_id))
-            if fixture is None or not athlete.get("entrou_em_campo"):
+            if fixture is None:
+                continue
+            database_history_rows.append(
+                build_history_row(
+                    played_round, season, athlete_id, athlete, fixture, clubs, positions
+                )
+            )
+            if not athlete.get("entrou_em_campo"):
                 continue
 
             position = positions.get(athlete.get("posicao_id"), "Desconhecida")
@@ -180,6 +407,12 @@ def main():
                 round_scouts[scout] += float(scout_values.get(scout) or 0)
 
     current_fixtures = fixtures_response.get("partidas", [])
+    upcoming_rows = build_upcoming_rows(
+        current_fixtures, clubs, season, round_number
+    )
+    club_rows, athlete_rows, round_rows = build_dimension_rows(
+        market, clubs, positions, status, round_number
+    )
     opponents = {}
     for fixture in current_fixtures:
         home_id = fixture["clube_casa_id"]
@@ -293,27 +526,31 @@ def main():
             f"(candidatos: {len(candidate_players)})."
         )
 
-    output_dir = ensure_output_dir()
-    lineup_path = output_dir / f"escalacao_rodada_{round_number}_amostra.csv"
-    matchup_path = output_dir / f"confrontos_rodada_{round_number}_amostra.csv"
-    write_lineup(lineup_path, round_number, lineup)
-    write_matchups(
-        matchup_path,
+    history_inserted, previous_history_round = persist_postgres_tables(
+        database_url,
+        season,
         round_number,
-        current_fixtures,
-        clubs,
-        team_games,
-        team_round_scouts,
+        club_rows,
+        athlete_rows,
+        round_rows,
+        database_history_rows,
+        upcoming_rows,
     )
 
     projected_total = sum(player["projecao"] for player in lineup)
-    print(f"Temporada {status.get('temporada')}, rodada {round_number}.")
-    print(f"Escalação: {lineup_path} (11 atletas).")
-    print(f"Confrontos: {matchup_path}.")
-    if output_dir != OUTPUT_DIR:
+    print(f"Temporada {season}, rodada {round_number}.")
+    print(f"Dimensões atualizadas: {len(club_rows)} clubes, {len(athlete_rows)} atletas, {len(round_rows)} rodadas.")
+    print(
+        f"PostgreSQL: {history_inserted} registros novos em {HISTORY_TABLE} "
+        f"(histórico anterior até a rodada {previous_history_round}); "
+        f"{len(upcoming_rows)} linhas atualizadas em {FIXTURES_TABLE}."
+    )
+    print("Escalação sugerida:")
+    for player in lineup:
         print(
-            "A pasta do projeto não permitiu gravação; os arquivos foram "
-            f"salvos em {output_dir}."
+            f"- {player['nome']} | {player['posicao']} | {player['time']} "
+            f"| {player['mando']} vs {player['adversario']} "
+            f"| projeção {player['projecao']:.2f}"
         )
     print(f"Projeção agregada: {projected_total:.2f} pontos; não é garantia de resultado.")
     if projected_total < 130:
@@ -369,122 +606,6 @@ def select_lineup(candidates):
             -player["projecao"],
         ),
     )
-
-
-def write_lineup(path, round_number, lineup):
-    columns = (
-        "rodada", "atleta_id", "nome", "time", "sigla_time", "posicao",
-        "adversario", "mando", "status_mercado", "jogos_ultimos_5",
-        "media_ultimos_5", "media_temporada", "pontos_cedidos_posicao",
-        "conquistados_casa", "conquistados_fora",
-        "cedidos_casa_posicao", "cedidos_fora_posicao",
-        "vitorias_ultimos_5_mando", "empates_ultimos_5_mando",
-        "derrotas_ultimos_5_mando", "projecao_pontos",
-    )
-    with path.open("w", encoding="utf-8-sig", newline="") as output:
-        writer = csv.DictWriter(output, fieldnames=columns)
-        writer.writeheader()
-        for player in lineup:
-            writer.writerow(
-                {
-                    "rodada": round_number,
-                    "atleta_id": player["id"],
-                    "nome": player["nome"],
-                    "time": player["time"],
-                    "sigla_time": player["sigla"],
-                    "posicao": player["posicao"],
-                    "adversario": player["adversario"],
-                    "mando": player["mando"],
-                    "status_mercado": "Provável",
-                    "jogos_ultimos_5": player["jogos_recentes"],
-                    "media_ultimos_5": f"{player['media_recente']:.2f}",
-                    "media_temporada": f"{player['media_temporada']:.2f}",
-                    "pontos_cedidos_posicao": f"{player['pontos_cedidos']:.2f}",
-                    "conquistados_casa": f"{player['pontos_casa']:.2f}",
-                    "conquistados_fora": f"{player['pontos_fora']:.2f}",
-                    "cedidos_casa_posicao": f"{player['cedidos_casa']:.2f}",
-                    "cedidos_fora_posicao": f"{player['cedidos_fora']:.2f}",
-                    "vitorias_ultimos_5_mando": player["vitorias_mando"],
-                    "empates_ultimos_5_mando": player["empates_mando"],
-                    "derrotas_ultimos_5_mando": player["derrotas_mando"],
-                    "projecao_pontos": f"{player['projecao']:.2f}",
-                }
-            )
-
-
-def write_matchups(path, round_number, fixtures, clubs, team_games, team_round_scouts):
-    columns = (
-        "rodada", "time", "sigla_time", "adversario", "mando",
-        "jogos_ultimos_5_mando", "vitorias", "empates", "derrotas",
-        "gols_feitos_media", "gols_sofridos_media",
-        "jogos_sem_sofrer_gol_media", "desarmes_media",
-        "finalizacoes_certas_media", "finalizacoes_defendidas_media",
-        "finalizacoes_para_fora_media", "finalizacoes_na_trave_media",
-        "faltas_sofridas_media", "defesas_dificeis_goleiro_media",
-        "faltas_cometidas_media",
-    )
-    with path.open("w", encoding="utf-8-sig", newline="") as output:
-        writer = csv.DictWriter(output, fieldnames=columns)
-        writer.writeheader()
-        for fixture in fixtures:
-            for club_id, opponent_id, venue, home in (
-                (
-                    fixture["clube_casa_id"],
-                    fixture["clube_visitante_id"],
-                    "Casa",
-                    True,
-                ),
-                (
-                    fixture["clube_visitante_id"],
-                    fixture["clube_casa_id"],
-                    "Fora",
-                    False,
-                ),
-            ):
-                history = sorted(
-                    team_games.get((club_id, venue), []), reverse=True
-                )[:5]
-                wins, draws, losses = win_form(history)
-                goals_for = [row[1] for row in history]
-                goals_against = [row[2] for row in history]
-                clean_sheets = sum(value == 0 for value in goals_against)
-                metrics = {
-                    scout: mean(
-                        [
-                            team_round_scouts.get((club_id, game_round), {}).get(
-                                scout, 0.0
-                            )
-                            for game_round, _, _ in history
-                        ]
-                    )
-                    for scout in SCOUTS
-                }
-                writer.writerow(
-                    {
-                        "rodada": round_number,
-                        "time": clubs.get(club_id, {}).get("nome", str(club_id)),
-                        "sigla_time": clubs.get(club_id, {}).get("sigla", str(club_id)),
-                        "adversario": clubs.get(opponent_id, {}).get("nome", str(opponent_id)),
-                        "mando": venue,
-                        "jogos_ultimos_5_mando": len(history),
-                        "vitorias": wins,
-                        "empates": draws,
-                        "derrotas": losses,
-                        "gols_feitos_media": f"{mean(goals_for):.2f}",
-                        "gols_sofridos_media": f"{mean(goals_against):.2f}",
-                        "jogos_sem_sofrer_gol_media": (
-                            f"{clean_sheets / len(history):.2f}" if history else ""
-                        ),
-                        "desarmes_media": f"{metrics['DS']:.2f}",
-                        "finalizacoes_certas_media": f"{(metrics['FD'] + metrics['G']):.2f}",
-                        "finalizacoes_defendidas_media": f"{metrics['FD']:.2f}",
-                        "finalizacoes_para_fora_media": f"{metrics['FF']:.2f}",
-                        "finalizacoes_na_trave_media": f"{metrics['FT']:.2f}",
-                        "faltas_sofridas_media": f"{metrics['FS']:.2f}",
-                        "defesas_dificeis_goleiro_media": f"{metrics['DE']:.2f}",
-                        "faltas_cometidas_media": f"{metrics['FC']:.2f}",
-                    }
-                )
 
 
 if __name__ == "__main__":
