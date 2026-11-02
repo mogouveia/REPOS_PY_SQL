@@ -64,9 +64,7 @@ def win_form(games):
     return wins, draws, losses
 
 
-def build_history_row(
-    round_number, season, athlete_id, athlete, fixture, clubs, positions
-):
+def build_history_row(round_number, athlete, fixture, clubs, positions):
     club_id = athlete.get("clube_id")
     home = fixture["clube_casa_id"] == club_id
     opponent_id = (
@@ -74,12 +72,7 @@ def build_history_row(
     )
     scout_values = athlete.get("scout") or {}
     row = {
-        "temporada": season,
         "rodada": round_number,
-        "atleta_id": int(athlete_id),
-        "time_id": club_id,
-        "adversario_id": opponent_id,
-        "partida_id": fixture.get("partida_id"),
         "nome": athlete.get("apelido") or athlete.get("nome") or "N/A",
         "posicao": positions.get(athlete.get("posicao_id"), "N/A"),
         "status": "N/A",
@@ -93,18 +86,13 @@ def build_history_row(
     return row
 
 
-def build_upcoming_rows(fixtures, clubs, season, round_number):
+def build_upcoming_rows(fixtures, clubs):
     rows = []
     for fixture in fixtures:
         home_id = fixture["clube_casa_id"]
         away_id = fixture["clube_visitante_id"]
         rows.append(
             {
-                "temporada": season,
-                "rodada": round_number,
-                "partida_id": fixture.get("partida_id"),
-                "meu_time_id": home_id,
-                "adversario_id": away_id,
                 "meu_time": clubs.get(home_id, {}).get("nome", str(home_id)),
                 "adversario": clubs.get(away_id, {}).get("nome", str(away_id)),
                 "condicao": "Mandante",
@@ -112,11 +100,6 @@ def build_upcoming_rows(fixtures, clubs, season, round_number):
         )
         rows.append(
             {
-                "temporada": season,
-                "rodada": round_number,
-                "partida_id": fixture.get("partida_id"),
-                "meu_time_id": away_id,
-                "adversario_id": home_id,
                 "meu_time": clubs.get(away_id, {}).get("nome", str(away_id)),
                 "adversario": clubs.get(home_id, {}).get("nome", str(home_id)),
                 "condicao": "Visitante",
@@ -196,7 +179,6 @@ def build_dimension_rows(market, clubs, positions, status, round_number):
 def persist_postgres_tables(
     database_url,
     season,
-    current_round,
     club_rows,
     athlete_rows,
     round_rows,
@@ -223,15 +205,11 @@ def persist_postgres_tables(
         "temporada", "rodada", "status", "status_mercado", "fechamento"
     )
     history_columns = (
-        "temporada", "rodada", "atleta_id", "time_id", "adversario_id",
-        "partida_id", "nome", "posicao", "status", "time", "jogo",
-        "adversario", "pontuacao",
+        "rodada", "nome", "posicao", "status", "time", "jogo", "adversario",
+        "pontuacao",
         *(scout.lower() for scout in DATABASE_SCOUTS),
     )
-    fixture_columns = (
-        "temporada", "rodada", "partida_id", "meu_time_id", "adversario_id",
-        "meu_time", "adversario", "condicao",
-    )
+    fixture_columns = ("meu_time", "adversario", "condicao")
 
     def upsert_statement(table, columns, key_columns):
         quoted_columns = ", ".join(f'"{column}"' for column in columns)
@@ -256,41 +234,69 @@ def persist_postgres_tables(
     round_upsert = upsert_statement(
         ROUND_DIMENSION, round_columns, ("temporada", "rodada")
     )
+    history_quoted_columns = ", ".join(
+        f'"{column}"' for column in history_columns
+    )
+    history_parameters = ", ".join(
+        f":{column}" for column in history_columns
+    )
+    fixture_quoted_columns = ", ".join(
+        f'"{column}"' for column in fixture_columns
+    )
+    fixture_parameters = ", ".join(
+        f":{column}" for column in fixture_columns
+    )
     history_insert = text(
-        f"INSERT INTO {HISTORY_TABLE} "
-        f"({', '.join(f'\"{column}\"' for column in history_columns)}) "
-        f"VALUES ({', '.join(f':{column}' for column in history_columns)})"
+        f"INSERT INTO {HISTORY_TABLE} ({history_quoted_columns}) "
+        f"VALUES ({history_parameters})"
     )
     fixtures_insert = text(
-        f"INSERT INTO {FIXTURES_TABLE} "
-        f"({', '.join(f'\"{column}\"' for column in fixture_columns)}) "
-        f"VALUES ({', '.join(f':{column}' for column in fixture_columns)})"
+        f"INSERT INTO {FIXTURES_TABLE} ({fixture_quoted_columns}) "
+        f"VALUES ({fixture_parameters})"
     )
     engine = create_engine(database_url, pool_pre_ping=True)
     try:
         with engine.begin() as connection:
             connection.exec_driver_sql(DDL_PATH.read_text(encoding="utf-8"))
+            connection.execute(
+                text("SELECT pg_advisory_xact_lock(hashtext(:lock_name))"),
+                {"lock_name": "cartola_scout_etl"},
+            )
             connection.execute(club_upsert, club_rows)
             connection.execute(athlete_upsert, athlete_rows)
             connection.execute(round_upsert, round_rows)
 
-            last_round = connection.execute(
+            previous_season = connection.execute(
                 text(
-                    f"""
-                    SELECT GREATEST(
-                        COALESCE((
-                            SELECT MAX(rodada) FROM {HISTORY_TABLE}
-                            WHERE temporada = :temporada
-                        ), 0),
-                        COALESCE((
-                            SELECT MAX(rodada) FROM {HISTORY_TABLE}
-                            WHERE temporada IS NULL AND rodada <= :rodada_atual
-                        ), 0)
-                    )
-                    """
+                    "SELECT temporada FROM cartola_carga_controle "
+                    "WHERE fonte = :fonte FOR UPDATE"
                 ),
-                {"temporada": season, "rodada_atual": current_round},
-            ).scalar() or 0
+                {"fonte": HISTORY_TABLE},
+            ).scalar()
+            last_round = 0
+            if previous_season == season:
+                last_round = connection.execute(
+                    text(
+                        f"""
+                        SELECT GREATEST(
+                            COALESCE((
+                                SELECT ultima_rodada
+                                FROM cartola_carga_controle
+                                WHERE fonte = :fonte
+                            ), 0),
+                            COALESCE((
+                                SELECT MAX(rodada) FROM {HISTORY_TABLE}
+                            ), 0)
+                        )
+                        """
+                    ),
+                    {"fonte": HISTORY_TABLE},
+                ).scalar() or 0
+            elif previous_season is None:
+                # Adopt legacy history as the current season's watermark once.
+                last_round = connection.execute(
+                    text(f"SELECT MAX(rodada) FROM {HISTORY_TABLE}")
+                ).scalar() or 0
             new_history = [
                 row
                 for row in history_rows
@@ -301,6 +307,35 @@ def persist_postgres_tables(
 
             connection.execute(text(f"DELETE FROM {FIXTURES_TABLE}"))
             connection.execute(fixtures_insert, upcoming_rows)
+            connection.execute(
+                text(
+                    """
+                    INSERT INTO cartola_carga_controle
+                        (fonte, temporada, ultima_rodada, atualizado_em)
+                    VALUES (:fonte, :temporada, :ultima_rodada, NOW())
+                    ON CONFLICT (fonte) DO UPDATE SET
+                        temporada = EXCLUDED.temporada,
+                        ultima_rodada = CASE
+                            WHEN cartola_carga_controle.temporada
+                                <> EXCLUDED.temporada
+                            THEN EXCLUDED.ultima_rodada
+                            ELSE GREATEST(
+                                cartola_carga_controle.ultima_rodada,
+                                EXCLUDED.ultima_rodada
+                            )
+                        END,
+                        atualizado_em = NOW()
+                    """
+                ),
+                {
+                    "fonte": HISTORY_TABLE,
+                    "temporada": season,
+                    "ultima_rodada": max(
+                        [int(last_round)]
+                        + [int(row["rodada"]) for row in new_history]
+                    ),
+                },
+            )
     finally:
         engine.dispose()
 
@@ -367,7 +402,7 @@ def main():
                 continue
             database_history_rows.append(
                 build_history_row(
-                    played_round, season, athlete_id, athlete, fixture, clubs, positions
+                    played_round, athlete, fixture, clubs, positions
                 )
             )
             if not athlete.get("entrou_em_campo"):
@@ -407,9 +442,7 @@ def main():
                 round_scouts[scout] += float(scout_values.get(scout) or 0)
 
     current_fixtures = fixtures_response.get("partidas", [])
-    upcoming_rows = build_upcoming_rows(
-        current_fixtures, clubs, season, round_number
-    )
+    upcoming_rows = build_upcoming_rows(current_fixtures, clubs)
     club_rows, athlete_rows, round_rows = build_dimension_rows(
         market, clubs, positions, status, round_number
     )
@@ -529,7 +562,6 @@ def main():
     history_inserted, previous_history_round = persist_postgres_tables(
         database_url,
         season,
-        round_number,
         club_rows,
         athlete_rows,
         round_rows,
