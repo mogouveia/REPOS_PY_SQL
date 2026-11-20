@@ -11,7 +11,33 @@ from pathlib import Path
 
 
 BASE_URL = "https://api.cartolafc.globo.com"
-DDL_PATH = Path(__file__).resolve().with_name("cartola_schema.sql")
+
+
+def resolve_ddl_path():
+    candidates = []
+    if "__file__" in globals():
+        script_dir = Path(__file__).resolve().parent
+        candidates.extend((
+            script_dir / "data" / "cartola_schema.sql",
+            script_dir / "cartola_schema.sql",
+        ))
+
+    working_dir = Path.cwd()
+    candidates.extend((
+        working_dir / "data" / "cartola_schema.sql",
+        working_dir / "cartola_schema.sql",
+    ))
+
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+
+    raise FileNotFoundError(
+        "cartola_schema.sql não encontrado em data/ ou na raiz do projeto"
+    )
+
+
+DDL_PATH = resolve_ddl_path()
 SCOUTS = ("DS", "FC", "FS", "FD", "FF", "FT", "DE", "G")
 DATABASE_SCOUTS = ("DS", "G", "FS", "FC", "SG", "CV", "CA", "FD", "FF")
 HISTORY_TABLE = "estatisticas_jogadores"
@@ -588,7 +614,6 @@ def main():
     if projected_total < 130:
         print("A projeção não alcança 130 pontos; não forcei a escalação para atingir a meta.")
 
-
 def select_lineup(candidates):
     formations = []
     for defenders in range(3, 6):
@@ -623,7 +648,7 @@ def select_lineup(candidates):
                     continue
                 selected.append(player)
                 team_counts[player["time_id"]] = team_counts.get(player["time_id"], 0) + 1
-
+        
         if len(selected) == 11:
             total = sum(player["projecao"] for player in selected)
             if total > best_total:
@@ -638,7 +663,6 @@ def select_lineup(candidates):
             -player["projecao"],
         ),
     )
-
 
 if __name__ == "__main__":
     main()
